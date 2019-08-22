@@ -17,15 +17,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="#" class="img-fluid" alt="about-us" id="image_about">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="heading-section p-md-5" id="sectionText"></div>
-                                </div>
-                            </div>
+                        <div class="card-body text-center">
+                            <span class="subheading">Quote of The Day</span>
+                            <h2 class="mb-2" id="displayText"></h2>
                         </div>
                     </div>
 
@@ -38,31 +32,28 @@
                                 </button>
                             </div>
                         </div>
-                            @csrf
-                            <div class="card-body">
-                                <input type="hidden" name="section" value="about-us" readonly>
+                        @csrf
+                        <div class="card-body">
+                            <input type="hidden" name="section" value="about-us" readonly>
 
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <label for="cardUpload_uploadFile">Upload new photo</label>
-                                        <input id="cardUpload_uploadFile" type="file">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="input">About us text</label>
-                                            <div id="inputAbout"></div>
-                                        </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="input">Quote of The Day text</label>
+                                        <div id="inputText"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="row">
-                                    <div class="col-lg-10"></div>
-                                    <div class="col-lg-2 mt-2 mt-sm-0">
-                                        <button id="btnSimpan" type="button" class="btn btn-block btn-success">Simpan</button>
-                                    </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-lg-10"></div>
+                                <div class="col-lg-2 mt-2 mt-sm-0">
+                                    <button id="btnSimpan" type="button" class="btn btn-block btn-success">Simpan</button>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,15 +78,13 @@
             }
         });
 
-        const imageAbout = document.getElementById('image_about');
-        const uploadArea = document.getElementById('cardUpload_uploadFile');
-        const editorContainer = document.getElementById('inputAbout');
+        const editorContainer = document.getElementById('inputText');
         let editor = new Quill(editorContainer, {
             placeholder: 'Ketik disini ...',
             theme: 'snow',
         });
 
-        const sectionText = $('#sectionText');
+        const displayText = $('#displayText');
 
         const btnEdit = $('#btnEdit');
         const btnClose = $('#btnClose');
@@ -105,7 +94,7 @@
 
         function reloadForm() {
             $.ajax({
-                url: '{{ url('admin/web-component/about-us/editor') }}',
+                url: '{{ url('admin/web-component/quote-of-the-day/list') }}',
                 method: 'post',
                 success: function (response) {
                     // console.log(response);
@@ -115,67 +104,18 @@
         }
 
         function reloadData() {
-            let result = '<h2 class="mb-4">About us</h2>';
             $.ajax({
-                url: '{{ url('admin/web-component/about-us/list') }}',
+                url: '{{ url('admin/web-component/quote-of-the-day/list') }}',
                 method: 'post',
                 success: function (response) {
                     // console.log(response);
-                    let data = JSON.parse(response);
-                    sectionText.html(result+data.text);
-                    imageAbout.src = data.image;
+                    displayText.html(response);
                 }
             })
         }
 
         $(document).ready(function () {
             reloadData();
-
-            FilePond.create( uploadArea );
-            FilePond.setOptions({
-                allowImageTransform: true,
-                allowImageResize: true,
-                imageResizeMode: 'cover',
-                imageResizeTargetHeight: 700,
-                imageResizeTargetWidth: 1200,
-                imageTransformOutputMimeType: 'image/jpeg',
-                allowMultiple: false,
-                allowDrop: true,
-                server: {
-                    process: (fieldName, file, metadata, load, error, progress, abort) => {
-                        const formData = new FormData();
-                        formData.append(fieldName, file, file.name);
-
-                        const request = new XMLHttpRequest();
-                        request.open('POST','{{ url('admin/web-component/about-us/upload') }}');
-                        request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
-
-                        request.upload.onprogress = (e) => {
-                            progress(e.lengthComputable, e.loaded, e.total);
-                        };
-
-                        request.onload = function () {
-                            if (request.status >= 200 && request.status < 300) {
-                                load(request.responseText);
-                                console.log(request.responseText);
-                            } else {
-                                error('gagal');
-                            }
-                        };
-
-                        request.send(formData);
-
-                        return {
-                            abort: () => {
-                                request.abort();
-
-                                abort();
-                            }
-                        }
-                    }
-                }
-            });
-
             btnEdit.click(function (e) {
                 e.preventDefault();
                 reloadForm();
@@ -196,7 +136,7 @@
                 let data = editor.root.innerHTML;
                 // console.log(data);
                 $.ajax({
-                    url: '{{ url('admin/web-component/about-us/save') }}',
+                    url: '{{ url('admin/web-component/quote-of-the-day/save') }}',
                     method: 'post',
                     data: {editor: data},
                     success: function (response) {

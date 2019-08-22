@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Uptown</a>
+        <a class="navbar-brand" href="index.html">{{ config('app.app_name') }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
         </button>
@@ -58,33 +58,9 @@
     </div>
 </div>
 
-<section class="ftco-section ftco-no-pb">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({{ asset('home/images/about.jpg') }});">
-            </div>
-            <div class="col-md-6 wrap-about py-md-5 ftco-animate">
-                <div class="heading-section p-md-5">
-                    <h2 class="mb-4">About us</h2>
-
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section ftco-no-pb">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                <span class="subheading">Quote of The Day</span>
-                <h2 class="mb-2">The smartest way to buy a home</h2>
-            </div>
-        </div>
-    </div>
-</section>
+@include('home.landing-page.about-us')
+@include('home.landing-page.quote-of-the-day')
+@include('home.landing-page.our-team')
 
 <section class="ftco-section ftco-no-pb">
     <div class="container">

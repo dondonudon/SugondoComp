@@ -13,7 +13,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home.layout');
+    return view('home.layout')
+        ->with('about_us',\App\Http\Controllers\Home\LandingPage::aboutUs())
+        ->with('quote',\App\Http\Controllers\Home\LandingPage::quote())
+        ->with('ourteam',\App\Http\Controllers\Home\LandingPage::ourteam());
 });
 
 Route::get('admin', 'Dashboard\overview@index');
@@ -49,3 +52,18 @@ Route::post('admin/web-component/about-us/save', 'Dashboard\WebAboutUsController
 Route::post('admin/web-component/about-us/list', 'Dashboard\WebAboutUsController@list');
 Route::post('admin/web-component/about-us/editor', 'Dashboard\WebAboutUsController@editorData');
 Route::post('admin/web-component/about-us/upload', 'Dashboard\WebAboutUsController@upload');
+
+Route::get('admin/web-component/quote-of-the-day', 'Dashboard\WebQuote@index');
+Route::post('admin/web-component/quote-of-the-day/list', 'Dashboard\WebQuote@list');
+Route::post('admin/web-component/quote-of-the-day/save', 'Dashboard\WebQuote@save');
+
+Route::get('admin/web-component/image-slider', 'Dashboard\WebImageSlider@index');
+Route::post('admin/web-component/image-slider/list', 'Dashboard\WebImageSlider@list');
+Route::post('admin/web-component/image-slider/upload', 'Dashboard\WebImageSlider@upload');
+Route::post('admin/web-component/image-slider/delete', 'Dashboard\WebImageSlider@delete');
+
+Route::get('admin/web-component/our-team', 'Dashboard\WebOurTeam@index');
+Route::post('admin/web-component/our-team/list', 'Dashboard\WebOurTeam@list');
+Route::post('admin/web-component/our-team/submit', 'Dashboard\WebOurTeam@submit');
+Route::post('admin/web-component/our-team/edit', 'Dashboard\WebOurTeam@edit');
+Route::post('admin/web-component/our-team/delete', 'Dashboard\WebOurTeam@delete');

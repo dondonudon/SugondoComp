@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\DB;
 
 class SysMenuController extends Controller
 {
-    public function index(Request $request) {
-        $segment = $request->segment(3);
+    public function index() {
+        $segment = \request()->segment(3);
         $permit = login::permission($segment);
 
         switch ($permit) {
@@ -74,7 +74,6 @@ class SysMenuController extends Controller
     public function edit(Request $request) {
         $id = $request->id;
         $group = $request->group;
-        $system = $request->system_type;
         $nama = $request->nama;
         $url = $request->url;
         $segment_name = $request->segment_name;
@@ -85,7 +84,6 @@ class SysMenuController extends Controller
                 ->where('id','=',$id)
                 ->update([
                     'id_group' => $group,
-                    'system' => $system,
                     'segment_name' => $segment_name,
                     'name' => $nama,
                     'url' => $url,
