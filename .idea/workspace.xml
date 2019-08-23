@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/kevin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SysMenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/SysMenuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebAboutUsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebAboutUsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MsLister.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MsLister.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MsMarketer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/MsMarketer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/msLister.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/msLister.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/msMarketer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/msMarketer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_20_151701_create_web_general_infos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_151701_create_web_general_infos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_22_111052_create_ms_listers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_22_111052_create_ms_listers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_22_111109_create_ms_marketers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_22_111109_create_ms_marketers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/footer-script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master-data/lister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master-data/lister.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/master-data/marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/master-data/marketer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -129,6 +136,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -180,7 +188,9 @@
       <workItem from="1566200221032" duration="7151000" />
       <workItem from="1566264964394" duration="22361000" />
       <workItem from="1566351858637" duration="26214000" />
-      <workItem from="1566437684724" duration="9119000" />
+      <workItem from="1566437684724" duration="25321000" />
+      <workItem from="1566485595144" duration="6102000" />
+      <workItem from="1566523393852" duration="1808000" />
     </task>
     <servers />
   </component>

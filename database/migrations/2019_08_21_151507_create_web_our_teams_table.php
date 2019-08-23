@@ -15,7 +15,7 @@ class CreateWebOurTeamsTable extends Migration
     {
         Schema::create('web_our_team', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama',100);
+            $table->string('fullname',100);
             $table->string('jabatan',100);
             $table->string('foto',100);
             $table->timestamps();

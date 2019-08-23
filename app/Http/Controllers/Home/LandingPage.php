@@ -49,4 +49,22 @@ class LandingPage extends Controller
             return response()->json($ex);
         }
     }
+
+    public static function contactUs() {
+        try {
+            $contact = DB::table('web_general_info')->get();
+
+            $result = [];
+            foreach ($contact as $c) {
+                $result[] = [
+                    'area' => $c->area,
+                    'data' => $c->data
+                ];
+            }
+
+            return $result;
+        } catch (\Exception $ex) {
+            return response()->json($ex);
+        }
+    }
 }

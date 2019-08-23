@@ -13,8 +13,10 @@ class CreateMsMarketersTable extends Migration
      */
     public function up()
     {
-        Schema::create('ms_marketers', function (Blueprint $table) {
+        Schema::create('ms_marketer', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('fullname',100);
+            $table->string('photo',150);
             $table->timestamps();
         });
     }

@@ -58,7 +58,7 @@ $segment = request()->segments();
                     </a>
                     <ul class="nav nav-treeview">
                         @foreach($sm['menu'] as $m)
-                            <li class="nav-item">
+                            <li class="nav-item bg-gradient-gray-dark">
                                 @php
                                 $status = '';
                                 if (isset($segment[2]) && $segment[1].$segment[2] == $sm['group']['segment_name'].$m['segment_name']) {

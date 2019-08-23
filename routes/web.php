@@ -43,6 +43,16 @@ Route::post('admin/master-data/user-management/edit', 'Dashboard\MsUserManagemen
 Route::post('admin/master-data/user-management/reset', 'Dashboard\MsUserManagementController@reset');
 Route::post('admin/master-data/user-management/user-permission', 'Dashboard\MsUserManagementController@userPermission');
 
+Route::get('admin/master-data/lister', 'Dashboard\MsLister@index');
+Route::post('admin/master-data/lister/list', 'Dashboard\MsLister@list');
+Route::post('admin/master-data/lister/submit', 'Dashboard\MsLister@submit');
+Route::post('admin/master-data/lister/delete', 'Dashboard\MsLister@delete');
+
+Route::get('admin/master-data/marketer', 'Dashboard\MsMarketer@index');
+Route::post('admin/master-data/marketer/list', 'Dashboard\MsMarketer@list');
+Route::post('admin/master-data/marketer/submit', 'Dashboard\MsMarketer@submit');
+Route::post('admin/master-data/marketer/delete', 'Dashboard\MsMarketer@delete');
+
 Route::get('admin/user-profile/edit', 'Dashboard\UserprofileEditController@index');
 Route::post('admin/user-profile/edit/list', 'Dashboard\UserprofileEditController@list');
 Route::post('admin/user-profile/edit/edit', 'Dashboard\UserprofileEditController@edit');
@@ -67,3 +77,7 @@ Route::post('admin/web-component/our-team/list', 'Dashboard\WebOurTeam@list');
 Route::post('admin/web-component/our-team/submit', 'Dashboard\WebOurTeam@submit');
 Route::post('admin/web-component/our-team/edit', 'Dashboard\WebOurTeam@edit');
 Route::post('admin/web-component/our-team/delete', 'Dashboard\WebOurTeam@delete');
+
+Route::get('admin/web-component/contact-us', 'Dashboard\WebContactUs@index');
+Route::post('admin/web-component/contact-us/list', 'Dashboard\WebContactUs@list');
+Route::post('admin/web-component/contact-us/submit', 'Dashboard\WebContactUs@submit');

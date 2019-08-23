@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 
-@section('page title','WEB Component Our Team')
+@section('page title','MASTER DATA Marketer')
 
 @section('content')
     <div class="content">
@@ -14,9 +14,8 @@
                             <table class="table table-sm table-bordered display nowrap" id="tableIndex" width="100%">
                                 <thead class="bg-dark">
                                 <tr>
-                                    <th width="20%">Image</th>
-                                    <th>Nama</th>
-                                    <th>Jabatan</th>
+                                    <th width="20%">Foto</th>
+                                    <th>Nama Lengkap</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -60,10 +59,6 @@
                                         <div class="form-group">
                                             <label for="fullname">Nama Lengkap</label>
                                             <input type="text" class="form-control" id="fullname" name="fullname" autocomplete="off">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control" id="jabatan" name="jabatan" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
@@ -128,10 +123,9 @@
                     const formData = new FormData();
                     formData.append(fieldName, file, file.name);
                     formData.append('fullname', $('#fullname').val());
-                    formData.append('jabatan', $('#jabatan').val());
 
                     const request = new XMLHttpRequest();
-                    request.open('POST','{{ url('admin/web-component/our-team/submit') }}');
+                    request.open('POST','{{ url('admin/master-data/marketer/submit') }}');
                     request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
 
                     request.upload.onprogress = (e) => {
@@ -171,32 +165,29 @@
 
         const cardComponent = $('#cardComponent');
 
-        const iNamaLengkap = document.getElementById('fullname');
-        const iJabatan = document.getElementById('jabatan');
+        const iFullname = document.getElementById('fullname');
         const iID = document.getElementById('idForm');
         const iStatus = document.getElementById('inputStatus');
 
-        let vID, vNamaLengkap, vJabatan;
+        let vID, vFullname;
 
         function resetForm() {
             pond.removeFiles();
             iID.value = '';
             iStatus.value = 'new';
-            iNamaLengkap.value = '';
-            iJabatan.value = '';
+            iFullname.value = '';
         }
 
-        function setValue(status,id,fullname,jabatan) {
+        function setValue(status,id,fullname) {
             iStatus.value = status;
             iID.value = id;
-            iNamaLengkap.value = fullname;
-            iJabatan.value = jabatan;
+            iFullname.value = fullname;
         }
 
         const tableIndex = $('#tableIndex').DataTable({
             "ajax": {
                 "method": "POST",
-                "url": "{{ url('admin/web-component/our-team/list') }}",
+                "url": "{{ url('admin/master-data/marketer/list') }}",
                 "header": {
                     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content'),
                 },
@@ -209,13 +200,15 @@
             },
             "columns": [
                 {
-                    "data": "foto",
+                    "data": "photo",
                     "render": function(data, type, row) {
                         return '<img src="{{ url('storage') }}/'+data+'" class="img-fluid" alt="image-team">';
                     }
                 },
                 { "data": "fullname" },
-                { "data": "jabatan" },
+            ],
+            order: [
+                [ 1, 'asc' ]
             ],
         });
         $('#tableIndex tbody').on( 'click', 'tr', function () {
@@ -232,8 +225,7 @@
                 btnHapus.removeAttr('disabled');
 
                 vID = data.id;
-                vNamaLengkap = data.fullname;
-                vJabatan = data.jabatan;
+                vFullname = data.fullname;
             }
         });
 
@@ -253,7 +245,7 @@
             btnEdit.click(function (e) {
                 e.preventDefault();
                 cardComponent.removeClass('d-none');
-                setValue('edit',vID,vNamaLengkap,vJabatan);
+                setValue('edit',vID,vFullname);
                 $('html, body').animate({
                     scrollTop: cardComponent.offset().top
                 }, 500);
@@ -261,7 +253,7 @@
             btnHapus.click(function (e) {
                 e.preventDefault();
                 Swal.fire({
-                    title: vNamaLengkap.value+" akan dihapus",
+                    title: vFullname.value+" akan dihapus",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -270,7 +262,7 @@
                 }).then((result) => {
                     if (result.value) {
                         $.ajax({
-                            url: '{{ url('admin/web-component/our-team/delete') }}',
+                            url: '{{ url('admin/master-data/marketer/delete') }}',
                             method: 'post',
                             data: {id: vID},
                             success: function (response) {

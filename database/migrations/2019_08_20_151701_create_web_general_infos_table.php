@@ -17,7 +17,8 @@ class CreateWebGeneralInfosTable extends Migration
             $table->bigIncrements('id');
             $table->string('section',50);
             $table->string('area',50)->default('-');
-            $table->text('txt');
+            $table->string('type',20)->default('-');
+            $table->text('data');
             $table->timestamps();
         });
     }
