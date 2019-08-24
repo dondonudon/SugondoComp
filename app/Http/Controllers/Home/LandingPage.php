@@ -10,61 +10,57 @@ use Illuminate\Support\Facades\DB;
 
 class LandingPage extends Controller
 {
-    public static function aboutUs() {
+    public static function infoLandingPage() {
+        $result = [];
+
         try {
-            $image = DB::table('web_image')->where('section','=','about-us')->first();
-            $text = DB::table('web_general_info')->where('section','=','about-us')->first();
+            $generalInfo = DB::table('web_general_info')
+                ->select('web_general_info.section', 'web_general_info.area', 'web_general_info.type', 'web_general_info.data', 'web_image.filename')
+                ->leftJoin('web_image','web_general_info.section','=','web_image.section')
+                ->get();
+            foreach ($generalInfo as $c) {
+                if ($c->section == 'contact-us') {
+                    $result['contact-us'][$c->area] = $c->data;
+                } else {
+                    $result[$c->section] = [
+                        'area' => $c->area,
+                        'type' => $c->type,
+                        'data' => $c->data,
+                        'filename' => $c->filename,
+                    ];
+                }
+            }
 
-            $result = [
-                'image' => $image->filename,
-                'text' => $text->data,
-            ];
-
-            return $result;
-        } catch (\Exception $ex) {
-            return response()->json($ex);
-        }
-    }
-
-    public static function quote() {
-        try {
-            $text = DB::table('web_general_info')->where('section','=','quote-of-the-day')->first();
-
-            $result = [
-                'text' => isset($text->data)?$text->data:'',
-            ];
-
-            return $result;
-        } catch (\Exception $ex) {
-            return response()->json($ex);
-        }
-    }
-
-    public static function ourteam() {
-        try {
-            $text = DB::table('web_our_team')->get();
-
-            return $text;
-        } catch (\Exception $ex) {
-            return response()->json($ex);
-        }
-    }
-
-    public static function contactUs() {
-        try {
-            $contact = DB::table('web_general_info')->get();
-
-            $result = [];
-            foreach ($contact as $c) {
-                $result[] = [
-                    'area' => $c->area,
-                    'data' => $c->data
+            $team = DB::table('web_our_team')
+                ->select('fullname','jabatan','foto as photo')
+                ->get();
+            foreach ($team as $t) {
+                $result['team'][] = [
+                    'fullname' => $t->fullname,
+                    'jabatan' => $t->jabatan,
+                    'photo' => $t->photo,
                 ];
             }
 
+            $result['top-lister'] = DB::table('web_rumah_dijual')
+                ->select('ms_lister.fullname','ms_lister.photo',DB::raw('count(*) as total'))
+                ->join('ms_lister','web_rumah_dijual.id_lister','=','ms_lister.id')
+                ->groupBy('id_lister')
+                ->limit(3)
+                ->get()->toArray();
+
+            $result['top-marketer'] = DB::table('web_top_marketer')
+                ->select('ms_marketer.fullname','ms_marketer.photo','web_top_marketer.id')
+                ->join('ms_marketer','web_top_marketer.id_marketer','=','ms_marketer.id')
+                ->get()->toArray();
+            $result['favorite-marketer'] = DB::table('web_favorite_marketer')
+                ->select('ms_marketer.fullname','ms_marketer.photo','web_favorite_marketer.id')
+                ->join('ms_marketer','web_favorite_marketer.id_marketer','=','ms_marketer.id')
+                ->get()->toArray();
+
             return $result;
         } catch (\Exception $ex) {
-            return response()->json($ex);
+            dd('Exception Block',$ex);
         }
     }
 }

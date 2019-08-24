@@ -149,6 +149,10 @@
                 { "data": "segment_name" },
                 { "data": "ord" },
             ],
+            order: [
+                [0,'asc'],
+                [4,'asc'],
+            ]
         });
         $('#tableIndex tbody').on( 'click', 'tr', function () {
             let data = tableIndex.row( this ).data();

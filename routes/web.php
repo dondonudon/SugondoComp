@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.layout')
-        ->with('about_us',\App\Http\Controllers\Home\LandingPage::aboutUs())
-        ->with('quote',\App\Http\Controllers\Home\LandingPage::quote())
-        ->with('ourteam',\App\Http\Controllers\Home\LandingPage::ourteam());
+        ->with('info',\App\Http\Controllers\Home\LandingPage::infoLandingPage());
 });
 
 Route::get('admin', 'Dashboard\overview@index');
@@ -78,6 +76,25 @@ Route::post('admin/web-component/our-team/submit', 'Dashboard\WebOurTeam@submit'
 Route::post('admin/web-component/our-team/edit', 'Dashboard\WebOurTeam@edit');
 Route::post('admin/web-component/our-team/delete', 'Dashboard\WebOurTeam@delete');
 
+Route::get('admin/web-component/top-marketer', 'Dashboard\WebTopMarketer@index');
+Route::post('admin/web-component/top-marketer/list', 'Dashboard\WebTopMarketer@list');
+Route::post('admin/web-component/top-marketer/list-marketer', 'Dashboard\WebTopMarketer@listMarketer');
+Route::post('admin/web-component/top-marketer/add', 'Dashboard\WebTopMarketer@add');
+Route::post('admin/web-component/top-marketer/delete', 'Dashboard\WebTopMarketer@delete');
+
+Route::get('admin/web-component/favorite-marketer', 'Dashboard\WebFavoriteMarketer@index');
+Route::post('admin/web-component/favorite-marketer/list', 'Dashboard\WebFavoriteMarketer@list');
+Route::post('admin/web-component/favorite-marketer/list-marketer', 'Dashboard\WebFavoriteMarketer@listMarketer');
+Route::post('admin/web-component/favorite-marketer/add', 'Dashboard\WebFavoriteMarketer@add');
+Route::post('admin/web-component/favorite-marketer/delete', 'Dashboard\WebFavoriteMarketer@delete');
+
 Route::get('admin/web-component/contact-us', 'Dashboard\WebContactUs@index');
 Route::post('admin/web-component/contact-us/list', 'Dashboard\WebContactUs@list');
 Route::post('admin/web-component/contact-us/submit', 'Dashboard\WebContactUs@submit');
+
+Route::get('admin/web-component/input-rumah-dijual', 'Dashboard\WebInputRumah@index');
+Route::post('admin/web-component/input-rumah-dijual/list', 'Dashboard\WebInputRumah@list');
+Route::post('admin/web-component/input-rumah-dijual/lister', 'Dashboard\WebInputRumah@lister');
+Route::post('admin/web-component/input-rumah-dijual/add', 'Dashboard\WebInputRumah@add');
+Route::post('admin/web-component/input-rumah-dijual/edit', 'Dashboard\WebInputRumah@edit');
+Route::post('admin/web-component/input-rumah-dijual/terjual', 'Dashboard\WebInputRumah@terjual');

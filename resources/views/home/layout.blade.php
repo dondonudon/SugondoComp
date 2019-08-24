@@ -60,6 +60,9 @@
 
 @include('home.landing-page.about-us')
 @include('home.landing-page.quote-of-the-day')
+@include('home.landing-page.top-lister')
+@include('home.landing-page.top-marketer')
+@include('home.landing-page.favourite-marketer')
 @include('home.landing-page.our-team')
 
 <section class="ftco-section ftco-no-pb">
