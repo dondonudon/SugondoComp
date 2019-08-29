@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebInputRumah.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebInputRumah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebOurTeam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebOurTeam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/footer-script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/system-utility/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/system-utility/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/input-rumah-dijual.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/input-rumah-dijual.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/our-team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -118,7 +120,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor/glide" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,15 +130,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/vendor/glide" />
+      <recent name="$PROJECT_DIR$/public/vendor" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/dashboard/system-utility" />
       <recent name="$PROJECT_DIR$/resources/views/dashboard/master-data" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/vendor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,7 +186,18 @@
       <workItem from="1566437684724" duration="25321000" />
       <workItem from="1566485595144" duration="6102000" />
       <workItem from="1566523393852" duration="20287000" />
-      <workItem from="1566610211400" duration="11131000" />
+      <workItem from="1566610211400" duration="12862000" />
+      <workItem from="1566791241670" duration="472000" />
+      <workItem from="1566791770234" duration="743000" />
+      <workItem from="1566792554433" duration="2509000" />
+      <workItem from="1566807419205" duration="1298000" />
+      <workItem from="1566815518025" duration="440000" />
+      <workItem from="1566869301490" duration="2445000" />
+      <workItem from="1566872829480" duration="7000" />
+      <workItem from="1566892306320" duration="5392000" />
+      <workItem from="1566956484234" duration="19812000" />
+      <workItem from="1567042320185" duration="23610000" />
+      <workItem from="1567088955164" duration="8914000" />
     </task>
     <servers />
   </component>

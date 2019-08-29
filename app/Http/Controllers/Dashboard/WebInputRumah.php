@@ -33,7 +33,7 @@ class WebInputRumah extends Controller
     public function list() {
         try {
             $rumah = DB::table('web_rumah_dijual')
-                ->select('web_rumah_dijual.id','ms_lister.fullname as lister','nama_rumah','lokasi','detail','harga','gambar')
+                ->select('web_rumah_dijual.id','web_rumah_dijual.id_lister','ms_lister.fullname as lister','nama_rumah','lokasi','detail','harga','gambar','luas_tanah','luas_bangunan','lantai','kamar_tidur','kamar_mandi','dapur_bersih','dapur_kotor','taman','arah_rumah','listrik','furniture')
                 ->join('ms_lister','web_rumah_dijual.id_lister','=','ms_lister.id')
                 ->where('status','=',0)
                 ->get();
@@ -79,6 +79,17 @@ class WebInputRumah extends Controller
             $rumah->detail = $request->detail;
             $rumah->harga = $request->harga;
             $rumah->gambar = $filename;
+            $rumah->luas_tanah = $request->luas_tanah;
+            $rumah->luas_bangunan = $request->luas_bangunan;
+            $rumah->lantai = $request->lantai;
+            $rumah->kamar_tidur = $request->kamar_tidur;
+            $rumah->kamar_mandi = $request->kamar_mandi;
+            $rumah->dapur_bersih = $request->dapur_bersih;
+            $rumah->dapur_kotor = $request->dapur_kotor;
+            $rumah->taman = $request->taman;
+            $rumah->arah_rumah = $request->arah_rumah;
+            $rumah->listrik = $request->listrik;
+            $rumah->furniture = $request->furniture;
             $rumah->save();
             return 'success';
         } catch (\Exception $ex) {

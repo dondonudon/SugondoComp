@@ -78,6 +78,11 @@ class WebOurTeam extends Controller
         }
     }
 
+    public function editGambar(Request $request) {
+        $file = $request->file('filepond');
+        $extension = $request->file('filepond')->getClientOriginalExtension();
+    }
+
     public function delete(Request $request) {
         $id = $request->id;
 

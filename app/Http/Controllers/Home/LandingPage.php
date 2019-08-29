@@ -42,6 +42,8 @@ class LandingPage extends Controller
                 ];
             }
 
+            $result['image-slider'] = DB::table('web_image')->where('section','=','image-slider')->get()->toArray();
+
             $result['top-lister'] = DB::table('web_rumah_dijual')
                 ->select('ms_lister.fullname','ms_lister.photo',DB::raw('count(*) as total'))
                 ->join('ms_lister','web_rumah_dijual.id_lister','=','ms_lister.id')
@@ -56,6 +58,16 @@ class LandingPage extends Controller
             $result['favorite-marketer'] = DB::table('web_favorite_marketer')
                 ->select('ms_marketer.fullname','ms_marketer.photo','web_favorite_marketer.id')
                 ->join('ms_marketer','web_favorite_marketer.id_marketer','=','ms_marketer.id')
+                ->get()->toArray();
+            $result['aktivitas-kita'] = DB::table('web_aktivitas_kita')
+                ->select('id','judul','image','short_desc','content','username','created_at')
+                ->where('status','=',1)
+                ->orderBy('created_at','desc')
+                ->limit(4)
+                ->get()->toArray();
+            $result['rumah-dijual'] = DB::table('web_rumah_dijual')
+                ->where('status','=',0)
+                ->orderBy('created_at','desc')
                 ->get()->toArray();
 
             return $result;

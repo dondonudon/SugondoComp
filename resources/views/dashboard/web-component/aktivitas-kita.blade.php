@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 
-@section('page title','WEB Component Rumah Dijual')
+@section('page title','WEB Component Aktivitas Kami')
 
 @section('content')
     <div class="content">
@@ -13,12 +13,11 @@
                             <table class="table table-sm table-bordered display nowrap" id="tableIndex" width="100%">
                                 <thead class="bg-dark">
                                 <tr>
-                                    <th>Lister</th>
-                                    <th>Nama Rumah</th>
-                                    <th>Lokasi</th>
-                                    <th>Detail</th>
-                                    <th>Harga</th>
-                                    <th>Gambar</th>
+                                    <th>Judul</th>
+                                    <th>Image</th>
+                                    <th>Content</th>
+                                    <th>Username</th>
+                                    <th>Status</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -26,8 +25,8 @@
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col-lg-2">
-                                    <button type="button" class="btn btn-block btn-outline-success btn-sm" id="btnTerjual" disabled>
-                                        <i class="fas fa-check"></i> Terjual
+                                    <button type="button" class="btn btn-block btn-outline-danger btn-sm" id="btnTerjual" disabled>
+                                        <i class="fas fa-times"></i> Hide
                                     </button>
                                 </div>
                                 <div class="col-lg-4"></div>
@@ -70,83 +69,19 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label for="iLister">Lister</label>
-                                            <select id="iLister"></select>
+                                            <label for="iJudul">Judul</label>
+                                            <input class="form-control" id="iJudul">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="iNamaRumah">Nama Rumah</label>
-                                            <input class="form-control" id="iNamaRumah">
+                                            <label for="iShortDesc">Ringkasan Singkat</label>
+                                            <input class="form-control" id="iShortDesc" maxlength="150">
+                                            <small>Ringkasan aktivitas yang akan ditampilkan pada halaman depan (maksimal 150 karakter)</small>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="iLokasi">Lokasi</label>
-                                            <input class="form-control" id="iLokasi">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iDetail">Detail</label>
-                                            <textarea class="form-control" id="iDetail" rows="3"></textarea>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iHarga">Harga</label>
-                                            <input class="form-control" id="iHarga">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iLuasTanah">Luas Tanah</label>
-                                            <input class="form-control" id="iLuasTanah">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iLuasBangunan">Luas Bangunan</label>
-                                            <input class="form-control" id="iLuasBangunan">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iLantai">Lantai</label>
-                                            <input class="form-control" id="iLantai">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iKamarTidur">Kamar Tidur</label>
-                                            <input class="form-control" id="iKamarTidur">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iKamarMandi">Kamar Mandi</label>
-                                            <input class="form-control" id="iKamarMandi">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iDapurBersih">Dapur Bersih</label>
-                                            <input class="form-control" id="iDapurBersih">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iDapurKotor">Dapur Kotor</label>
-                                            <input class="form-control" id="iDapurKotor">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iTaman">Taman</label>
-                                            <input class="form-control" id="iTaman">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iArahRumah">Arah Rumah</label>
-                                            <input class="form-control" id="iArahRumah">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iListrik">Listrik</label>
-                                            <input class="form-control" id="iListrik">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="iFurniture">Furniture</label>
-                                            <input class="form-control" id="iFurniture">
+                                            <label for="iKonten">Konten</label>
+                                            <div id="iKonten"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -171,34 +106,31 @@
 @endsection
 
 @section('style')
+    <link rel="stylesheet" href="{{ asset('vendor/quill/dist/quill.snow.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/quill/dist/quill.bubble.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/filepond-master/filepond.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/filepond-master/filepond-plugin-image-preview.css') }}">
 @endsection
 
 @section('script')
+    <script src="{{ asset('vendor/quill/dist/quill.min.js') }}"></script>
+
     <script src="{{ asset('vendor/filepond-master/filepond-plugin-image-preview.js') }}"></script>
     <script src="{{ asset('vendor/filepond-master/filepond-plugin-image-crop.js') }}"></script>
     <script src="{{ asset('vendor/filepond-master/filepond-plugin-image-resize.js') }}"></script>
     <script src="{{ asset('vendor/filepond-master/filepond-plugin-image-transform.js') }}"></script>
     <script src="{{ asset('vendor/filepond-master/filepond.min.js') }}"></script>
+
     <script>
         const iType = document.getElementById('iType');
-        const iLister = document.getElementById('iLister');
-        const iNamaRumah = document.getElementById('iNamaRumah');
-        const iLokasi = document.getElementById('iLokasi');
-        const iDetail = document.getElementById('iDetail');
-        const iHarga = document.getElementById('iHarga');
-        const iLuasTanah = document.getElementById('iLuasTanah');
-        const iLuasBangunan = document.getElementById('iLuasBangunan');
-        const iLantai = document.getElementById('iLantai');
-        const iKamarTidur = document.getElementById('iKamarTidur');
-        const iKamarMandi = document.getElementById('iKamarMandi');
-        const iDapurBersih = document.getElementById('iDapurBersih');
-        const iDapurKotor = document.getElementById('iDapurKotor');
-        const iTaman = document.getElementById('iTaman');
-        const iArahRumah = document.getElementById('iArahRumah');
-        const iListrik = document.getElementById('iListrik');
-        const iFurniture = document.getElementById('iFurniture');
+        const iJudul = document.getElementById('iJudul');
+        const iShortDesc = document.getElementById('iShortDesc');
+        const iKonten = document.getElementById('iKonten');
+        let editor = new Quill(iKonten, {
+            placeholder: 'Ketik disini ...',
+            theme: 'snow',
+        });
 
         FilePond.registerPlugin(
             FilePondPluginImagePreview,
@@ -222,61 +154,38 @@
             iconProcess: '<svg></svg>',
             server: {
                 process: (fieldName, file, metadata, load, error, progress, abort) => {
-                    if (iType.value === 'new') {
-                        const formData = new FormData();
-                        formData.append(fieldName, file, file.name);
-                        formData.append('id_lister', iLister.value);
-                        formData.append('nama_rumah', iNamaRumah.value);
-                        formData.append('lokasi', iLokasi.value);
-                        formData.append('detail', iDetail.value);
-                        formData.append('harga', iHarga.value);
-                        formData.append('luas_tanah', iLuasTanah.value);
-                        formData.append('luas_bangunan', iLuasBangunan.value);
-                        formData.append('lantai', iLantai.value);
-                        formData.append('kamar_tidur', iKamarTidur.value);
-                        formData.append('kamar_mandi', iKamarMandi.value);
-                        formData.append('dapur_bersih', iDapurBersih.value);
-                        formData.append('dapur_kotor', iDapurKotor.value);
-                        formData.append('taman', iTaman.value);
-                        formData.append('arah_rumah', iArahRumah.value);
-                        formData.append('listrik', iListrik.value);
-                        formData.append('furniture', iFurniture.value);
+                    const formData = new FormData();
+                    formData.append(fieldName, file, file.name);
+                    formData.append('judul', iJudul.value);
+                    formData.append('short_desc', iShortDesc.value);
+                    formData.append('konten', editor.root.innerHTML);
 
-                        const request = new XMLHttpRequest();
-                        request.open('POST','{{ url('admin/web-component/input-rumah-dijual/add') }}');
-                        request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
+                    const request = new XMLHttpRequest();
+                    request.open('POST','{{ url('admin/web-component/aktivitas-kita/add') }}');
+                    request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
 
-                        request.upload.onprogress = (e) => {
-                            progress(e.lengthComputable, e.loaded, e.total);
-                        };
+                    request.upload.onprogress = (e) => {
+                        progress(e.lengthComputable, e.loaded, e.total);
+                    };
 
-                        request.onload = function () {
-                            if (request.status >= 200 && request.status < 300) {
-                                load(request.responseText);
-                                console.log(request.responseText);
-                                fetchData(setDisplayData);
-                                Swal.fire({
-                                    type: 'success',
-                                    title: 'Tersimpan',
-                                    showConfirmButton: false,
-                                    timer: 2000
-                                });
-                            } else {
-                                error('gagal');
-                            }
-                        };
-
-                        request.send(formData);
-
-                        return {
-                            abort: () => {
-                                request.abort();
-
-                                abort();
-                            }
+                    request.onload = function () {
+                        if (request.status >= 200 && request.status < 300) {
+                            load(request.responseText);
+                            console.log(request.responseText);
+                            fetchData(setDisplayData);
+                        } else {
+                            error('gagal');
                         }
-                    } else {
+                    };
 
+                    request.send(formData);
+
+                    return {
+                        abort: () => {
+                            request.abort();
+
+                            abort();
+                        }
                     }
                 }
             }
@@ -284,17 +193,13 @@
         const uploadArea = document.getElementById('iGambar');
         const pond = FilePond.create( uploadArea );
 
-        const sLister = new SlimSelect({
-            select: '#iLister',
-        });
-
         let vID;
 
         const btnTambah = document.getElementById('btnAdd');
-        const btnEditData = document.getElementById('btnEditData');
-        const btnEditGambar = document.getElementById('btnEditGambar');
         const btnTerjual = document.getElementById('btnTerjual');
         const btnClose = document.getElementById('btnClose');
+        const btnEditData = document.getElementById('btnEditData');
+        const btnEditGambar = document.getElementById('btnEditGambar');
 
         const cardEditor = document.getElementById('cardEditor');
         const formData = document.getElementById('formData');
@@ -302,12 +207,11 @@
         const tableIndex = $('#tableIndex').DataTable({
             scrollX: true,
             "columns": [
-                { "data": "lister" },
-                { "data": "nama_rumah" },
-                { "data": "lokasi" },
-                { "data": "detail" },
-                { "data": "harga" },
-                { "data": "gambar" },
+                { "data": "judul" },
+                { "data": "image" },
+                { "data": "content" },
+                { "data": "username" },
+                { "data": "status" },
             ],
         });
         $('#tableIndex tbody').on( 'click', 'tr', function () {
@@ -316,14 +220,14 @@
             if ( $(this).hasClass('selected') ) {
                 $(this).removeClass('selected');
                 btnTerjual.setAttribute('disabled', true);
-                btnEditData.setAttribute('disabled', true);
                 btnEditGambar.setAttribute('disabled', true);
+                btnEditData.setAttribute('disabled', true);
             } else {
                 tableIndex.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
                 btnTerjual.removeAttribute('disabled');
-                btnEditData.removeAttribute('disabled');
                 btnEditGambar.removeAttribute('disabled');
+                btnEditData.removeAttribute('disabled');
 
                 vID = data.id;
             }
@@ -332,21 +236,9 @@
         function resetForm() {
             pond.removeFiles();
             iType.value = 'new';
-            iNamaRumah.value = '';
-            iLokasi.value = '';
-            iDetail.value = '';
-            iHarga.value = '';
-            iLuasTanah.value = '';
-            iLuasBangunan.value = '';
-            iLantai.value = '';
-            iKamarTidur.value = '';
-            iKamarMandi.value = '';
-            iDapurBersih.value = '';
-            iDapurKotor.value = '';
-            iTaman.value = '';
-            iArahRumah.value = '';
-            iListrik.value = '';
-            iFurniture.value = '';
+            iJudul.value = '';
+            iShortDesc.value = '';
+            editor.setText('');
         }
 
         function serialize(data) {
@@ -381,11 +273,11 @@
         function setSelectLister(response) {
             // console.log(response);
             let data = JSON.parse(response);
-            sLister.setData(data);
+            // sLister.setData(data);
         }
 
         function fetchData(functionTarget) {
-            kvAjax('{{ url('admin/web-component/input-rumah-dijual/list') }}','',functionTarget);
+            kvAjax('{{ url('admin/web-component/aktivitas-kita/list') }}','',functionTarget);
         }
 
         function rumahTerjual(response) {
@@ -412,7 +304,6 @@
             // console.log(response);
             if (response === 'success') {
                 fetchData(setDisplayData);
-                kvAjax('{{ url('admin/web-component/favorite-marketer/list-marketer') }}','',setSelectLister);
                 Swal.fire({
                     type: 'success',
                     title: 'Tersimpan',
@@ -431,7 +322,6 @@
 
         document.addEventListener('DOMContentLoaded', function (event) {
             fetchData(setDisplayData);
-            kvAjax('{{ url('admin/web-component/input-rumah-dijual/lister') }}','',setSelectLister);
 
             btnTambah.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -441,12 +331,12 @@
 
             btnEditData.addEventListener('click',function (e) {
                 e.preventDefault();
-                window.location.href = '{{ url('admin/web-component/input-rumah-dijual/edit-data') }}/'+vID;
+                window.location.href = '{{ url('admin/web-component/aktivitas-kita/edit-data') }}/'+vID;
             });
 
             btnEditGambar.addEventListener('click',function (e) {
                 e.preventDefault();
-                window.location.href = '{{ url('admin/web-component/input-rumah-dijual/edit-gambar') }}/'+vID;
+                window.location.href = '{{ url('admin/web-component/aktivitas-kita/edit-gambar') }}/'+vID;
             });
 
             btnTerjual.addEventListener('click', function (e) {

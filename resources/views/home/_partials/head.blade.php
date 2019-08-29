@@ -1,4 +1,11 @@
-<title>Uptown - Free Bootstrap 4 Template by Colorlib</title>
+<title>
+    {{ config('app.app_name') }}
+    {{
+    (isset(Illuminate\Support\Facades\Request::segments()[1]))
+    ? ' - '.Illuminate\Support\Facades\Request::segments()[0]
+    : ''
+    }}
+</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,6 +25,12 @@
 <link rel="stylesheet" href="{{ asset('home/css/bootstrap-datepicker.css') }}">
 <link rel="stylesheet" href="{{ asset('home/css/jquery.timepicker.css') }}">
 
-<link rel="stylesheet" href="{{ asset('home/css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('home/home-icon/flaticon.css') }}">
+{{--<link rel="stylesheet" href="{{ asset('home/css/flaticon.css') }}">--}}
 <link rel="stylesheet" href="{{ asset('home/css/icomoon.css') }}">
 <link rel="stylesheet" href="{{ asset('home/css/style.css') }}">
+
+{{-- GLIDE JS --}}
+<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.core.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.theme.css') }}">

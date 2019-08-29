@@ -21,15 +21,21 @@
                                 </thead>
                             </table>
                         </div>
-
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-6"></div>
-                                <div class="col-lg-2 mt-2 mt-sm-0">
+                                <div class="col-lg-2">
                                     <button type="button" class="btn btn-block btn-outline-danger" id="btnHapus" disabled>Hapus</button>
                                 </div>
+                                <div class="col-lg-4"></div>
                                 <div class="col-lg-2 mt-2 mt-sm-0">
-                                    <button type="button" class="btn btn-block btn-warning" id="btnEdit" disabled>Edit</button>
+                                    <button type="button" class="btn btn-block btn-outline-dark" id="btnEditGambar" disabled>
+                                        <i class="fas fa-image"></i> Edit Gambar
+                                    </button>
+                                </div>
+                                <div class="col-lg-2 mt-2 mt-sm-0">
+                                    <button type="button" class="btn btn-block btn-outline-dark" id="btnEditData" disabled>
+                                        <i class="fas fa-pen"></i> Edit Data
+                                    </button>
                                 </div>
                                 <div class="col-lg-2 mt-2 mt-sm-0">
                                     <button type="button" class="btn btn-block btn-primary" id="btnBaru">Baru</button>
@@ -55,8 +61,6 @@
                                         <input id="cardUpload_uploadFile" type="file">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="hidden" id="inputStatus" value="new">
-                                        <input type="hidden" id="idForm" name="id">
                                         <div class="form-group">
                                             <label for="fullname">Nama Lengkap</label>
                                             <input type="text" class="form-control" id="fullname" name="fullname" autocomplete="off">
@@ -164,7 +168,8 @@
         const pond = FilePond.create( uploadArea );
 
         const btnHapus = $('#btnHapus');
-        const btnEdit = $('#btnEdit');
+        const btnEditData = $('#btnEditData');
+        const btnEditGambar = $('#btnEditGambar');
         const btnBaru = $('#btnBaru');
         const btnClose = $('#btnClose');
         const btnSimpan = $('#btnSimpan');
@@ -174,23 +179,19 @@
         const iNamaLengkap = document.getElementById('fullname');
         const iJabatan = document.getElementById('jabatan');
         const iID = document.getElementById('idForm');
-        const iStatus = document.getElementById('inputStatus');
 
         let vID, vNamaLengkap, vJabatan;
 
         function resetForm() {
             pond.removeFiles();
-            iID.value = '';
-            iStatus.value = 'new';
             iNamaLengkap.value = '';
             iJabatan.value = '';
         }
 
-        function setValue(status,id,fullname,jabatan) {
-            iStatus.value = status;
-            iID.value = id;
-            iNamaLengkap.value = fullname;
-            iJabatan.value = jabatan;
+        function setValue(id,fullname,jabatan) {
+            editID.value = id;
+            editFullname.value = fullname;
+            editJabatan.value = jabatan;
         }
 
         const tableIndex = $('#tableIndex').DataTable({
@@ -223,13 +224,15 @@
             // console.log(data);
             if ( $(this).hasClass('selected') ) {
                 $(this).removeClass('selected');
-                btnEdit.attr('disabled','true');
+                btnEditData.attr('disabled','true');
                 btnHapus.attr('disabled','true');
+                btnEditGambar.attr('disabled','true');
             } else {
                 tableIndex.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
-                btnEdit.removeAttr('disabled');
+                btnEditData.removeAttr('disabled');
                 btnHapus.removeAttr('disabled');
+                btnEditGambar.removeAttr('disabled');
 
                 vID = data.id;
                 vNamaLengkap = data.fullname;
@@ -250,13 +253,13 @@
                     scrollTop: cardComponent.offset().top
                 }, 500);
             });
-            btnEdit.click(function (e) {
+            btnEditGambar.click(function (e) {
                 e.preventDefault();
-                cardComponent.removeClass('d-none');
-                setValue('edit',vID,vNamaLengkap,vJabatan);
-                $('html, body').animate({
-                    scrollTop: cardComponent.offset().top
-                }, 500);
+                window.location.href = '{{ url('admin/web-component/our-team/edit-gambar') }}/'+vID;
+            });
+            btnEditData.click(function (e) {
+                e.preventDefault();
+                window.location.href = '{{ url('admin/web-component/our-team/edit') }}/'+vID;
             });
             btnHapus.click(function (e) {
                 e.preventDefault();
@@ -301,38 +304,16 @@
                     resetForm();
                     cardComponent.addClass('d-none');
                     tableIndex.ajax.reload();
-                    btnEdit.attr('disabled','true');
+                    btnEditData.attr('disabled','true');
                     btnHapus.attr('disabled','true');
                 });
             });
             btnSimpan.click(function (e) {
                 e.preventDefault();
-                if (iStatus.value === 'new') {
-                    pond.processFile().then(file => {
-                        console.log('file processed');
-                        resetForm();
-                    });
-                } else {
-                    $.ajax({
-                        url: '{{ url('admin/web-component/our-team/edit') }}',
-                        method: 'post',
-                        data: {id: iID.value, fullname: iNamaLengkap.value, jabatan: iJabatan.value},
-                        success: function (response) {
-                            if (response === 'success') {
-                                Swal.fire({
-                                    title: 'Tersimpan!',
-                                    type: 'success',
-                                })
-                            } else {
-                                Swal.fire({
-                                    title: 'Gagal!',
-                                    text: response,
-                                    type: 'error',
-                                })
-                            }
-                        }
-                    })
-                }
+                pond.processFile().then(file => {
+                    console.log('file processed');
+                    resetForm();
+                });
             });
         });
     </script>
