@@ -13,6 +13,9 @@
                             <div class="row">
                                 <div class="col-lg-10">
                                     <dl class="row">
+                                        <dt class="col-sm-2">Info Perusahaan</dt>
+                                        <dd class="col-sm-9" id="dInfoPerusahaan"></dd>
+
                                         <dt class="col-sm-2">Alamat</dt>
                                         <dd class="col-sm-9" id="dAlamat"></dd>
 
@@ -48,16 +51,20 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
+                                            <label for="iInfoPerusahaan">Info Perusahaan</label>
+                                            <input type="text" class="form-control" id="iInfoPerusahaan" name="info_perusahaan" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="iAlamat">Alamat</label>
-                                            <input type="text" class="form-control" id="iAlamat" name="alamat">
+                                            <input type="text" class="form-control" id="iAlamat" name="alamat" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="iNoTelp">No. Telp</label>
-                                            <input type="text" class="form-control" id="iNoTelp" name="no_telp">
+                                            <input type="text" class="form-control" id="iNoTelp" name="no_telp" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="iEmail">e-Mail</label>
-                                            <input type="text" class="form-control" id="iEmail" name="email">
+                                            <input type="text" class="form-control" id="iEmail" name="email" required>
                                         </div>
                                     </div>
                                 </div>
@@ -85,10 +92,12 @@
         const headers = {
             'X-CSRF-TOKEN': '{{ csrf_token() }}',
         };
+        const dInfoPerusahaan = document.getElementById('dInfoPerusahaan');
         const dAlamat = document.getElementById('dAlamat');
         const dNoTelp = document.getElementById('dNoTelp');
         const dEmail = document.getElementById('dEmail');
 
+        const iInfoPerusahaan = document.getElementById('iInfoPerusahaan');
         const iAlamat = document.getElementById('iAlamat');
         const iNoTelp = document.getElementById('iNoTelp');
         const iEmail = document.getElementById('iEmail');

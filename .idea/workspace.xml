@@ -3,17 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebInputRumah.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebInputRumah.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebOurTeam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebOurTeam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/ListRumah.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/ListRumah.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/input-rumah-dijual.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/input-rumah-dijual.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/our-team.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/rumah/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/rumah/list.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +196,8 @@
       <workItem from="1566892306320" duration="5392000" />
       <workItem from="1566956484234" duration="19812000" />
       <workItem from="1567042320185" duration="23610000" />
-      <workItem from="1567088955164" duration="8914000" />
+      <workItem from="1567088955164" duration="9066000" />
+      <workItem from="1567129055456" duration="5203000" />
     </task>
     <servers />
   </component>

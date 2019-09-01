@@ -2,7 +2,7 @@
 
 return [
 
-    'app_name' => 'RayWhite',
+    'app_name' => 'Ray White',
     /*
     |--------------------------------------------------------------------------
     | Application Name

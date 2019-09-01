@@ -8986,7 +8986,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: rgba(0, 0, 0, 0.8); }
+  background: #f4f4f4; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
@@ -9361,7 +9361,7 @@ textarea.form-control {
   .agent .desc {
     position: relative;
     width: 85%;
-    padding: 20px;
+    padding: 10px;
     margin-top: -50px;
     margin-left: 20px;
     background: #fff;
