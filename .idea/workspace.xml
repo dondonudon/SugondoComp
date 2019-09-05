@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section_edit-gambar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/AktivitasKita.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/AktivitasKita.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/blog/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/blog/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/blog/show-all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/blog/show-all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/aktivitas-kita.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/aktivitas-kita.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/rumah-dijual.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/rumah-dijual.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/slider.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/rumah/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/rumah/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +197,8 @@
       <workItem from="1567514304700" duration="2179000" />
       <workItem from="1567561434746" duration="46000" />
       <workItem from="1567578462463" duration="5109000" />
-      <workItem from="1567646662913" duration="913000" />
+      <workItem from="1567646662913" duration="1501000" />
+      <workItem from="1567648372034" duration="373000" />
     </task>
     <servers />
   </component>
