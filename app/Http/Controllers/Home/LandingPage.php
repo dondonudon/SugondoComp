@@ -21,6 +21,8 @@ class LandingPage extends Controller
             foreach ($generalInfo as $c) {
                 if ($c->section == 'contact-us') {
                     $result['contact-us'][$c->area] = $c->data;
+                } elseif ($c->section == 'header-section') {
+                    $result['header-section'][$c->area] = $c->data;
                 } else {
                     $result[$c->section] = [
                         'area' => $c->area,
@@ -43,6 +45,7 @@ class LandingPage extends Controller
             }
 
             $result['image-slider'] = DB::table('web_image')->where('section','=','image-slider')->get()->toArray();
+            $result['header-section-image'] = DB::table('web_image')->where('section','=','header-section')->first();
 
             $result['top-lister'] = DB::table('web_rumah_dijual')
                 ->select('ms_lister.fullname','ms_lister.photo',DB::raw('count(*) as total'))

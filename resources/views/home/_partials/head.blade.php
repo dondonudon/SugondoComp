@@ -29,8 +29,29 @@
 <link rel="stylesheet" href="{{ asset('home/home-icon/flaticon.css') }}">
 {{--<link rel="stylesheet" href="{{ asset('home/css/flaticon.css') }}">--}}
 <link rel="stylesheet" href="{{ asset('home/css/icomoon.css') }}">
+
+{{-- SLICK JS --}}
+<link rel="stylesheet" href="{{ asset('vendor/slick-1.8.1/slick/slick.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/slick-1.8.1/slick/slick-theme.css') }}">
+
 <link rel="stylesheet" href="{{ asset('home/css/style.css') }}">
 
 {{-- GLIDE JS --}}
-<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.core.css') }}">
-<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.theme.css') }}">
+{{--<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.core.css') }}">--}}
+{{--<link rel="stylesheet" href="{{ asset('vendor/glide/dist/css/glide.theme.css') }}">--}}
+
+<style>
+    .slick-prev:before,
+    .slick-next:before {
+        color: yellow;
+    }
+    .slick-slider {
+        margin:0 -10px;
+    }
+    .slick-slide {
+        padding:5px;
+        text-align:center;
+        margin-right:10px;
+        margin-left:10px;
+    }
+</style>

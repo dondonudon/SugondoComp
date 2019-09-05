@@ -18,20 +18,16 @@
                     <div class="block-23 mb-3">
                         <ul>
                             <li>
-                                <span class="fas fa-map-marked-alt"></span>
+                                <i class="fas fa-map-marked-alt"></i>
                                 <span> {{ $info['contact-us']['alamat'] }}</span>
                             </li>
                             <li>
-                                <a href="#">
-                                    <span class="fas fa-phone"></span>
-                                    <span>{{ $info['contact-us']['no_telp'] }}</span>
-                                </a>
+                                <i class="fas fa-phone"></i>
+                                <span> {{ $info['contact-us']['no_telp'] }}</span>
                             </li>
                             <li>
-                                <a href="#">
-                                    <span class="fas fa-envelope"></span>
-                                    <span>{{ $info['contact-us']['email'] }}</span>
-                                </a>
+                                <i class="fas fa-envelope"></i>
+                                <span> {{ $info['contact-us']['email'] }}</span>
                             </li>
                         </ul>
                     </div>
@@ -58,3 +54,4 @@
         </div>
     </div>
 </footer>
+<div class="container-fluid" style="background-color: #ffe512; height: 10px;"></div>

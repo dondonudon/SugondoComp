@@ -7,6 +7,7 @@
 
 @include('home._partials.navbar')
 
+@include('home.landing-page.hero-section')
 @include('home.landing-page.slider')
 @include('home.landing-page.about-us')
 @include('home.landing-page.quote-of-the-day')

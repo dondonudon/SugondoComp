@@ -1,7 +1,7 @@
 @extends('home.blog.layout')
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('{{ url('storage/'.$content->image) }}');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('{{ url('storage/'.$head['header-section-image']->filename) }}');" data-stellar-background-ratio="0.5">
         <div class="overlay" style="background-color: lightgray; opacity: 0.5;"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -18,6 +18,13 @@
     <section class="ftco-section ftco-degree-bg">
         <div class="container">
             <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <img class="img-fluid" src="{{ url('storage/'.$head['header-section-image']->filename) }}" alt="gambar rumah">
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row mt-5">
 
                 <div class="col-md-2"></div>
                 <div class="col-md-8 ftco-animate">

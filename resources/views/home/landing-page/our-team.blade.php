@@ -1,4 +1,4 @@
-<section class="ftco-section ftco-agent ftco-no-pt">
+<section class="ftco-section ftco-agent goto-here" id="ourTeam">
     <div class="container">
         <div class="row justify-content-center pb-5">
             <div class="col-md-12 heading-section text-center ftco-animate">
@@ -11,7 +11,7 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="agent">
                         <div class="img">
-                            <img src="{{ url('storage/'.$t['photo']) }}" class="img-fluid" alt="{{ $t['fullname'] }}" style="width: auto; height: 300px;">
+                            <img src="{{ url('storage/'.$t['photo']) }}" class="img-fluid" alt="{{ $t['fullname'] }}">
                         </div>
                         <div class="desc text-center" style="background-color: yellow;">
                             <h3>{{ $t['fullname'] }}</h3>

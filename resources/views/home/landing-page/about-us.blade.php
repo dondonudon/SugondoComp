@@ -1,4 +1,4 @@
-<section class="ftco-section ftco-no-pb">
+<section class="ftco-section goto-here" id="aboutUs">
     <div class="container">
         <div class="row no-gutters">
             <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({{ $info['about-us']['filename'] }});">

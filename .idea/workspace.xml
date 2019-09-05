@@ -2,17 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section_edit-gambar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/ListRumah.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/ListRumah.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/AktivitasKita.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/AktivitasKita.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/home/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/_partials/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/blog/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/blog/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/blog/show-all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/blog/show-all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/aktivitas-kita.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/aktivitas-kita.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/favourite-marketer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/our-team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/quote-of-the-day.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/rumah-dijual.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/rumah-dijual.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/slider.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-lister.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/top-marketer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/rumah/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/rumah/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/rumah/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/rumah/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +138,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor/glide" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,13 +150,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/vendor/glide" />
-      <recent name="$PROJECT_DIR$/public/vendor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/dashboard/system-utility" />
       <recent name="$PROJECT_DIR$/resources/views/dashboard/master-data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/vendor" />
+      <recent name="$PROJECT_DIR$/public/vendor/glide" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -198,6 +216,16 @@
       <workItem from="1567042320185" duration="23610000" />
       <workItem from="1567088955164" duration="9066000" />
       <workItem from="1567129055456" duration="5203000" />
+      <workItem from="1567393536241" duration="2798000" />
+      <workItem from="1567397633719" duration="5847000" />
+      <workItem from="1567428588717" duration="242000" />
+      <workItem from="1567474238981" duration="1021000" />
+      <workItem from="1567478805201" duration="19980000" />
+      <workItem from="1567513820382" duration="219000" />
+      <workItem from="1567514304700" duration="2179000" />
+      <workItem from="1567561434746" duration="46000" />
+      <workItem from="1567578462463" duration="5109000" />
+      <workItem from="1567646662913" duration="913000" />
     </task>
     <servers />
   </component>

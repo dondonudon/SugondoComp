@@ -24,16 +24,20 @@ class login extends Controller
 
         $result = '';
 
-        $user = DB::table('sys_user')->where('username','=',$username);
-        if ($user->exists()) {
-            $data = $user->first();
-            if (Crypt::decryptString($data->password) == $password) {
-                $result = 'true';
-                Session::put('username',$username);
-                Session::put('status','login');
-            } else {
-                $result = 'username atau password salah';
+        try {
+            $user = DB::table('sys_user')->where('username','=',$username);
+            if ($user->exists()) {
+                $data = $user->first();
+                if (Crypt::decryptString($data->password) == $password) {
+                    $result = 'true';
+                    Session::put('username',$username);
+                    Session::put('status','login');
+                } else {
+                    $result = 'username atau password salah';
+                }
             }
+        } catch (\Exception $ex) {
+            dd('Exception Block',$ex);
         }
         return $result;
     }

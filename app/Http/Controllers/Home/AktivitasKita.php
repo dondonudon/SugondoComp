@@ -30,7 +30,8 @@ class AktivitasKita extends Controller
         $activity = DB::table('web_aktivitas_kita')->where('id','=',$id)->first();
         return view('home.blog.detail')
             ->with('content',$activity)
-            ->with('info',$result);
+            ->with('info',$result)
+            ->with('head',\App\Http\Controllers\Home\LandingPage::infoLandingPage());
     }
 
     public function list() {
@@ -55,6 +56,7 @@ class AktivitasKita extends Controller
         $activity = DB::table('web_aktivitas_kita')->orderBy('created_at','desc')->get();
         return view('home.blog.show-all')
             ->with('aktivitas_kita',$activity)
-            ->with('info',$result);
+            ->with('info',$result)
+            ->with('head',\App\Http\Controllers\Home\LandingPage::infoLandingPage());
     }
 }

@@ -60,6 +60,12 @@ Route::get('admin/user-profile/edit', 'Dashboard\UserprofileEditController@index
 Route::post('admin/user-profile/edit/list', 'Dashboard\UserprofileEditController@list');
 Route::post('admin/user-profile/edit/edit', 'Dashboard\UserprofileEditController@edit');
 
+Route::get('admin/web-component/header-image', 'Dashboard\WebHeaderImage@index');
+Route::get('admin/web-component/header-image/edit-data', 'Dashboard\WebHeaderImage@editData');
+Route::post('admin/web-component/header-image/edit-data/submit', 'Dashboard\WebHeaderImage@editDataSubmit');
+Route::get('admin/web-component/header-image/edit-gambar', 'Dashboard\WebHeaderImage@editImage');
+Route::post('admin/web-component/header-image/edit-gambar/submit', 'Dashboard\WebHeaderImage@editImageSubmit');
+
 Route::get('admin/web-component/about-us', 'Dashboard\WebAboutUsController@index');
 Route::post('admin/web-component/about-us/save', 'Dashboard\WebAboutUsController@save');
 Route::post('admin/web-component/about-us/list', 'Dashboard\WebAboutUsController@list');

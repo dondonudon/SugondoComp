@@ -11,7 +11,15 @@
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
                     <div class="text">
-                        <h3 class="heading"><a href="{{ url('aktivitas-kita/'.$a->id) }}">{{ $a->judul }}</a></h3>
+                        <h3 class="heading">
+                            <a href="{{ url('aktivitas-kita/'.$a->id) }}">
+                                <div class="row">
+                                    <div class="col text-truncate">
+                                        {{ $a->judul }}
+                                    </div>
+                                </div>
+                            </a>
+                        </h3>
                         <div class="meta mb-3">
                             <div><a href="{{ url('aktivitas-kita/'.$a->id) }}">{{ $a->created_at }}</a></div>
                             <div><a href="{{ url('aktivitas-kita/'.$a->id) }}">{{ $a->username }}</a></div>

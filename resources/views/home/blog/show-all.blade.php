@@ -1,7 +1,7 @@
 @extends('home.blog.layout')
 
 @section('content')
-    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-color: lightgray;');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('{{ url('storage/'.$head['header-section-image']->filename) }}');" data-stellar-background-ratio="0.5">
         <div class="overlay" style="background-color: lightgray; opacity: 0.5;"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -20,7 +20,15 @@
                     <div class="col-md-3 d-flex ftco-animate">
                         <div class="blog-entry justify-content-end">
                             <div class="text">
-                                <h3 class="heading"><a href="{{ url('aktivitas-kita/'.$a->id) }}">{{ $a->judul }}</a></h3>
+                                <h3 class="heading">
+                                    <a href="{{ url('aktivitas-kita/'.$a->id) }}">
+                                        <div class="row">
+                                            <div class="col text-truncate">
+                                                {{ $a->judul }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </h3>
                                 <div class="meta mb-3">
                                     <div>
                                         <a href="{{ url('aktivitas-kita/'.$a->id) }}">{{ $a->created_at }}</a>

@@ -18,7 +18,8 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <i class="fas fa-city"></i>
+{{--        <i class="fas fa-city"></i>--}}
+        <img src="{{ asset('home/images/rw-logo-2017.jpg') }}" class="img-fluid" ref="company logo" >
     </div>
     <!-- /.login-logo -->
     <div class="card">

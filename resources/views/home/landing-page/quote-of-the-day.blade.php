@@ -1,4 +1,4 @@
-<section class="ftco-section ftco-no-pb">
+<section class="ftco-section goto-here" id="quote">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 heading-section text-center ftco-animate mb-5">
