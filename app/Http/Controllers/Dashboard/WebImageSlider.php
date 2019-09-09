@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\OpenFunction\login;
+use App\webGeneralInfo;
 use App\webImages;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -26,7 +27,19 @@ class WebImageSlider extends Controller
                 break;
 
             default:
-                return view('dashboard.web-component.image-slider');
+                try {
+                    $images = DB::table('web_general_info')
+                        ->select('id','section','area','type','data')
+                        ->where([
+                            ['section','=','header'],
+                            ['area','=','slider'],
+                        ])
+                        ->orderBy('created_at','asc')
+                        ->get()->toArray();
+                } catch (\Exception $ex) {
+                    return response()->json($ex);
+                }
+                return view('dashboard.web-component.image_slider')->with('info',$images);
                 break;
         }
     }
@@ -44,7 +57,26 @@ class WebImageSlider extends Controller
         }
     }
 
-    public function upload(Request $request) {
+    public function uploadIndex() {
+        $segment = \request()->segment(3);
+        $permit = login::permission($segment);
+
+        switch ($permit) {
+            case 'login':
+                return redirect('admin/login');
+                break;
+
+            case 'not available':
+                return redirect('admin');
+                break;
+
+            default:
+                return view('dashboard.web-component.image_slider-add');
+                break;
+        }
+    }
+
+    public function uploadSubmit(Request $request) {
         $file = $request->file('filepond');
         $extension = $request->file('filepond')->getClientOriginalExtension();
 
@@ -54,14 +86,14 @@ class WebImageSlider extends Controller
 
             Storage::putFileAs('public', $file, $fileName);
 
-            $image = new webImages();
-            $image->section = 'image-slider';
-            $image->area = '';
-            $image->filename = $fileName;
-            $image->info = '';
+            $image = new webGeneralInfo();
+            $image->section = 'header';
+            $image->area = 'slider';
+            $image->type = 'image';
+            $image->data = $fileName;
             $image->save();
         } catch (\Exception $ex) {
-            return response()->json($ex);
+            dd('Exception Block',$ex);
         }
 
         return 'success';
@@ -69,12 +101,12 @@ class WebImageSlider extends Controller
 
     public function delete(Request $request) {
         try {
-            $image = DB::table('web_image')->where('id','=',$request->id)->first();
-            Storage::disk('public')->delete($image->filename);
-            DB::table('web_image')->where('id','=',$request->id)->delete();
+            $image = DB::table('web_general_info')->where('id','=',$request->id)->first();
+            Storage::disk('public')->delete($image->data);
+            DB::table('web_general_info')->where('id','=',$request->id)->delete();
             return 'success';
         } catch (\Exception $ex) {
-            return response()->json($ex);
+            dd('Exception Block',$ex);
         }
     }
 }

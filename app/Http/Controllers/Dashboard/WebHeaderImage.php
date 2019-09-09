@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\webGeneralInfo;
 use App\webImages;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,14 +26,14 @@ class WebHeaderImage extends Controller
                 break;
 
             default:
-                $image = DB::table('web_image')->where('section','header-section')->first();
-                $info['image'] = $image->filename;
-                $data = DB::table('web_general_info')
-                    ->select('area','data')
-                    ->where('section','=','header-section')->get()->toArray();
-                foreach ($data as $d) {
-                    $info[$d->area] = $d->data;
-                }
+                $image = DB::table('web_general_info')
+                    ->where([
+                        ['section','=','header'],
+                        ['area','=','background'],
+                        ['type','=','image'],
+                    ])
+                    ->first();
+                $info['image'] = $image->data;
                 return view('dashboard.web-component.header-section')->with('info',$info);
                 break;
         }
@@ -106,15 +107,7 @@ class WebHeaderImage extends Controller
                 break;
 
             default:
-                $info = [];
-                $data = DB::table('web_general_info')
-                    ->select('area','data')
-                    ->where('section','=','header-section')
-                    ->get()->toArray();
-                foreach ($data as $d) {
-                    $info[$d->area] = $d->data;
-                }
-                return view('dashboard.web-component.header-section_edit-gambar')->with('info',$info);
+                return view('dashboard.web-component.header-section_edit-gambar');
                 break;
         }
     }
@@ -125,12 +118,20 @@ class WebHeaderImage extends Controller
 
         try {
             $filename = Uuid::uuid1()->toString().'.'.$extension;
-            $team = DB::table('web_image')->where('section','=','header-section')->first();
+            $image = DB::table('web_general_info')
+                ->where([
+                    ['section','=','header'],
+                    ['area','=','background'],
+                ])
+                ->first();
 
-            Storage::disk('public')->delete($team->filename);
+            Storage::disk('public')->delete($image->data);
             Storage::putFileAs('public',$file,$filename);
 
-            DB::table('web_image')->where('section','=','header-section')->update(['filename' => $filename]);
+            webGeneralInfo::updateOrCreate(
+                ['section' => 'header','area' => 'background','type' => 'image'],
+                ['data' => $filename]
+            );
 
         } catch (\Exception $ex) {
             dd('Exception Block',$ex);

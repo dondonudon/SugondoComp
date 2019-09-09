@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 
-@section('page title','WEB Component Our Team - Edit Data')
+@section('page title','WEB Component Header Background - Ganti Gambar')
 
 @section('content')
     <div class="content">
@@ -10,20 +10,20 @@
 
                     <div class="card card-primary card-outline">
                         <div class="card-body">
+                            <p>Suggested Size: 1920 x 900 px</p>
                             <input type="hidden" name="id" id="iID">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg">
                                     <div id="uploadGambar"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <div class="row">
-                                <div class="col-lg-8"></div>
-                                <div class="col-lg-2">
-                                    <a href="{{ url('admin/web-component/header-image') }}" class="btn btn-outline-danger btn-block">Cancel</a>
+                            <div class="row justify-content-end">
+                                <div class="col-lg-2 mt-2 mt-sm-0">
+                                    <a href="{{ url('admin/web-component/header-background') }}" class="btn btn-outline-danger btn-block">Cancel</a>
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-2 mt-2 mt-sm-0">
                                     <button type="button" class="btn btn-success btn-block" id="btnUpload">Upload</button>
                                 </div>
                             </div>
@@ -66,12 +66,12 @@
             allowImageTransform: true,
             allowImageResize: true,
             imageResizeMode: 'cover',
-            imageResizeTargetHeight: 700,
-            imageResizeTargetWidth: 1200,
+            imageResizeTargetHeight: 900,
+            imageResizeTargetWidth: 1920,
             imageTransformOutputMimeType: 'image/jpeg',
             allowImagePreview: true,
-            imagePreviewMinHeight: 190,
-            imagePreviewMaxHeight: 200,
+            imagePreviewMinHeight: 300,
+            imagePreviewMaxHeight: 350,
             allowMultiple: false,
             allowDrop: true,
             instantUpload: false,
@@ -83,7 +83,7 @@
                     formData.append('id',iID.value);
 
                     const request = new XMLHttpRequest();
-                    request.open('POST','{{ url('admin/web-component/header-image/edit-gambar/submit') }}');
+                    request.open('POST','{{ url('admin/web-component/header-background/edit-gambar/submit') }}');
                     request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
 
                     request.upload.onprogress = (e) => {
@@ -99,7 +99,7 @@
                                     type: 'success',
                                     title: 'Tersimpan',
                                     onClose: function () {
-                                        window.location.href = '{{ url('admin/web-component/header-image') }}';
+                                        window.location.href = '{{ url('admin/web-component/header-background') }}';
                                     }
                                 });
                             }

@@ -60,11 +60,11 @@ Route::get('admin/user-profile/edit', 'Dashboard\UserprofileEditController@index
 Route::post('admin/user-profile/edit/list', 'Dashboard\UserprofileEditController@list');
 Route::post('admin/user-profile/edit/edit', 'Dashboard\UserprofileEditController@edit');
 
-Route::get('admin/web-component/header-image', 'Dashboard\WebHeaderImage@index');
-Route::get('admin/web-component/header-image/edit-data', 'Dashboard\WebHeaderImage@editData');
-Route::post('admin/web-component/header-image/edit-data/submit', 'Dashboard\WebHeaderImage@editDataSubmit');
-Route::get('admin/web-component/header-image/edit-gambar', 'Dashboard\WebHeaderImage@editImage');
-Route::post('admin/web-component/header-image/edit-gambar/submit', 'Dashboard\WebHeaderImage@editImageSubmit');
+Route::get('admin/web-component/header-background', 'Dashboard\WebHeaderImage@index');
+Route::get('admin/web-component/header-background/edit-data', 'Dashboard\WebHeaderImage@editData');
+Route::post('admin/web-component/header-background/edit-data/submit', 'Dashboard\WebHeaderImage@editDataSubmit');
+Route::get('admin/web-component/header-background/edit-gambar', 'Dashboard\WebHeaderImage@editImage');
+Route::post('admin/web-component/header-background/edit-gambar/submit', 'Dashboard\WebHeaderImage@editImageSubmit');
 
 Route::get('admin/web-component/about-us', 'Dashboard\WebAboutUsController@index');
 Route::post('admin/web-component/about-us/save', 'Dashboard\WebAboutUsController@save');
@@ -78,8 +78,18 @@ Route::post('admin/web-component/quote-of-the-day/save', 'Dashboard\WebQuote@sav
 
 Route::get('admin/web-component/image-slider', 'Dashboard\WebImageSlider@index');
 Route::post('admin/web-component/image-slider/list', 'Dashboard\WebImageSlider@list');
-Route::post('admin/web-component/image-slider/upload', 'Dashboard\WebImageSlider@upload');
+Route::get('admin/web-component/image-slider/upload', 'Dashboard\WebImageSlider@uploadIndex');
+Route::post('admin/web-component/image-slider/upload/submit', 'Dashboard\WebImageSlider@uploadSubmit');
 Route::post('admin/web-component/image-slider/delete', 'Dashboard\WebImageSlider@delete');
+
+Route::get('admin/web-component/visi-misi', 'Dashboard\WebVisiMisi@index');
+Route::get('admin/web-component/visi-misi/visi/image', 'Dashboard\WebVisiMisi@indexVisiImage');
+Route::get('admin/web-component/visi-misi/visi/text', 'Dashboard\WebVisiMisi@indexVisiText');
+Route::get('admin/web-component/visi-misi/misi/text', 'Dashboard\WebVisiMisi@indexMisiText');
+Route::post('admin/web-component/visi-misi/visi/image/submit', 'Dashboard\WebVisiMisi@uploadIndex');
+Route::post('admin/web-component/visi-misi/visi/text/submit', 'Dashboard\WebVisiMisi@uploadIndex');
+Route::post('admin/web-component/visi-misi/misi/text/submit', 'Dashboard\WebVisiMisi@uploadIndex');
+Route::post('admin/web-component/visi-misi/misi/text/delete', 'Dashboard\WebVisiMisi@uploadIndex');
 
 Route::get('admin/web-component/our-team', 'Dashboard\WebOurTeam@index');
 Route::post('admin/web-component/our-team/list', 'Dashboard\WebOurTeam@list');

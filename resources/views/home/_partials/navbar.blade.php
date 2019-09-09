@@ -1,75 +1,41 @@
-@php
-$segment = request()->segments();
-@endphp
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}" style="position: absolute; top: -10px">
-            <img class="img-fluid" src="{{ asset('home/images/rw-logo-2017.jpg') }}" alt="logo" width="65%">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                @if(!isset($segment[0]))
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#promo" class="nav-link">Promo</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#aboutUs" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#quote" class="nav-link">Quote</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#topLister" class="nav-link">Top Lister</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#topMarketer" class="nav-link">Top Marketer</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#favoriteMarketer" class="nav-link">Favorite Marketer</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#ourTeam" class="nav-link">Our Team</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('aktivitas-kita') }}" class="nav-link">Our Activity</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="#forSale" class="nav-link">For Sale</a>
-                    </li>
-                @else
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#promo') }}" class="nav-link">Promo</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#aboutUs') }}" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#quote') }}" class="nav-link">Quote</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#topLister') }}" class="nav-link">Top Lister</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#topMarketer') }}" class="nav-link">Top Marketer</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#favoriteMarketer') }}" class="nav-link">Favorite Marketer</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#ourTeam') }}" class="nav-link">Our Team</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('aktivitas-kita') }}" class="nav-link">Our Activity</a>
-                    </li>
-                    <li class="nav-item" style="background-color: yellow">
-                        <a href="{{ url('/#forSale') }}" class="nav-link">For Sale</a>
-                    </li>
-                @endif
-            </ul>
+<header class="header_area sticky-header">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="{{ url('/') }}"><img src="{{ asset('home/img/logo.png') }}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#promo">Promo</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Visi & Misi</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Product</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Contact Us</a></li>
+                    </ul>
+{{--                    <ul class="nav navbar-nav navbar-right">--}}
+{{--                        <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>--}}
+{{--                        <li class="nav-item">--}}
+{{--                            <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="search_input" id="search_input_box">
+        <div class="container">
+            <form class="d-flex justify-content-between">
+                <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+                <button type="submit" class="btn"></button>
+                <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+            </form>
         </div>
     </div>
-</nav>
+</header>

@@ -1,13 +1,19 @@
-<section class="ftco-section goto-here" id="aboutUs">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url({{ $info['about-us']['filename'] }});">
+<section class="exclusive-deal-area">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 no-padding exclusive-right">
+                <div class="row clock_sec clockdiv" id="clockdiv">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 text-right">
+                        <?php echo $info['about-us']['text'][0]['data'] ?>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 wrap-about py-md-5 ftco-animate">
-                <div class="heading-section p-md-5">
-                    <h2 class="mb-4">About us</h2>
-
-                    <?php echo $info['about-us']['data'] ?>
+            <div class="col-lg-6 no-padding exclusive-left" style="background-image: url({{ 'storage/'.$info['about-us']['image'][0]['data'] }});">
+                <div class="row clock_sec clockdiv" id="clockdiv">
+                    <div class="col-lg-12">
+                        <h1>About Us</h1>
+                    </div>
                 </div>
             </div>
         </div>

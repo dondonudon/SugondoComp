@@ -31,14 +31,16 @@ class WebAboutUsController extends Controller
     }
 
     public function list() {
+        $result = [];
         try {
-            $image = DB::table('web_image')->where('section','=','about-us')->first();
-            $info = DB::table('web_general_info')->where('section','=','about-us')->first();
+            $info = DB::table('web_general_info')->where('section','=','about-us')->get()->toArray();
 
-            $result = [
-                'image' => $image->filename,
-                'text' => $info->data,
-            ];
+            foreach ($info as $i) {
+                $result[$i->area] = [
+                    'type' => $i->type,
+                    'data' => $i->data,
+                ];
+            }
         } catch (\Exception $ex) {
             return response()->json($ex);
         }
@@ -61,18 +63,15 @@ class WebAboutUsController extends Controller
         try {
             $fileName = 'about-us.'.$extension;
             Storage::disk('public')->delete(['about-us.jpg','about-us.png']);
-            DB::table('web_image')->where('section','=','about-us')->delete();
 
             Storage::putFileAs('public', $file, $fileName);
 
-            $image = new webImages();
-            $image->section = 'about-us';
-            $image->area = '';
-            $image->filename = Storage::url($fileName);
-            $image->info = '';
-            $image->save();
+            webGeneralInfo::updateOrCreate(
+                ['section' => 'about-us', 'area' => 'image', 'type' => 'image'],
+                ['data' => $fileName]
+            );
         } catch (\Exception $ex) {
-            return response()->json($ex);
+            dd('Exception Block',$ex);
         }
 
         return 'success';
@@ -82,15 +81,12 @@ class WebAboutUsController extends Controller
         $editor = $request->editor;
 
         try {
-            DB::table('web_general_info')->where('section','=','about-us')->delete();
-            $info = new webGeneralInfo();
-            $info->section = 'about-us';
-            $info->area = '';
-            $info->type = '';
-            $info->data = $editor;
-            $info->save();
+            webGeneralInfo::updateOrCreate(
+                ['section' => 'about-us', 'area' => 'text', 'type' => 'text'],
+                ['data' => $editor]
+            );
         } catch (\Exception $ex) {
-            return response()->json($ex);
+            dd('Exception Block',$ex);
         }
 
         return 'success';

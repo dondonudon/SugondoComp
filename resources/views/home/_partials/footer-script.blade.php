@@ -1,40 +1,15 @@
-<script src="{{ asset('home/js/jquery.min.js') }}"></script>
-<script src="{{ asset('home/js/jquery-migrate-3.0.1.min.js') }}"></script>
-<script src="{{ asset('home/js/popper.min.js') }}"></script>
-<script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('home/js/jquery.easing.1.3.js') }}"></script>
-<script src="{{ asset('home/js/jquery.waypoints.min.js') }}"></script>
-<script src="{{ asset('home/js/jquery.stellar.min.js') }}"></script>
-<script src="{{ asset('home/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('home/js/vendor/jquery-2.2.4.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="{{ asset('home/js/vendor/bootstrap.min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.ajaxchimp.min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.nice-select.min.js') }}"></script>
+<script src="{{ asset('home/js/jquery.sticky.js') }}"></script>
+<script src="{{ asset('home/js/nouislider.min.js') }}"></script>
+<script src="{{ asset('home/js/countdown.js') }}"></script>
 <script src="{{ asset('home/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('home/js/aos.js') }}"></script>
-<script src="{{ asset('home/js/jquery.animateNumber.min.js') }}"></script>
-<script src="{{ asset('home/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('home/js/jquery.timepicker.min.js') }}"></script>
-<script src="{{ asset('home/js/scrollax.min.js') }}"></script>
+<script src="{{ asset('home/js/owl.carousel.min.js') }}"></script>
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+<script src="{{ asset('home/js/gmaps.min.js') }}"></script>
 <script src="{{ asset('home/js/main.js') }}"></script>
-
-{{--<script src="{{ asset('vendor/glide/dist/glide.min.js') }}"></script>--}}
-<script src="{{ asset('vendor/slick-1.8.1/slick/slick.min.js') }}"></script>
-<script>
-    // new Glide('.glide', {
-    //     type: 'carousel',
-    //     startAt: 0,
-    //     perView: 1,
-    //     autoplay: 2000,
-    // }).mount()
-    function goToSection(id) {
-        document.getElementById(id).scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-
-    $(document).ready(function(){
-        $('#slider_section').slick({
-            dots: true,
-            autoplay: true,
-            centerMode: true,
-            variableWidth: true,
-        });
-    });
-</script>

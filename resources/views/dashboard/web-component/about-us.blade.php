@@ -105,11 +105,11 @@
 
         function reloadForm() {
             $.ajax({
-                url: '{{ url('admin/web-component/about-us/editor') }}',
+                url: '{{ url('admin/web-component/about-us/list') }}',
                 method: 'post',
                 success: function (response) {
-                    // console.log(response);
-                    editor.root.innerHTML = response;
+                    let data = JSON.parse(response);
+                    editor.root.innerHTML = data.text.data;
                 }
             })
         }
@@ -120,10 +120,9 @@
                 url: '{{ url('admin/web-component/about-us/list') }}',
                 method: 'post',
                 success: function (response) {
-                    // console.log(response);
                     let data = JSON.parse(response);
-                    sectionText.html(result+data.text);
-                    imageAbout.src = data.image;
+                    sectionText.html(data.text.data);
+                    imageAbout.src = '{{ url('/') }}/storage/'+data.image.data;
                 }
             })
         }

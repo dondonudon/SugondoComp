@@ -3,6 +3,126 @@
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebAboutUsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebAboutUsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebHeaderImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebHeaderImage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebImageSlider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebImageSlider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/aos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/bootstrap-datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/bootstrap/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/bootstrap/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/css/mixins/_text-hide.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/flaticon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/icomoon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/jquery.timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/open-iconic-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/backup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/Flaticon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/Flaticon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/Flaticon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/Flaticon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/Flaticon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/_flaticon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/flaticon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/font/flaticon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/flaticon/license/license.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/icomoon/icomoon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/icomoon/icomoon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/icomoon/icomoon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/icomoon/icomoon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/css/_ionicons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/css/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/ionicons/fonts/ionicons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/open-iconic/open-iconic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/open-iconic/open-iconic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/open-iconic/open-iconic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/open-iconic/open-iconic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/fonts/open-iconic/open-iconic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/Flaticon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/Flaticon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/Flaticon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/Flaticon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/Flaticon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/_flaticon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/flaticon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/home-icon/flaticon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/bg_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/bg_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/image_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/loc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/person_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/person_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/person_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/person_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/rw-logo-2017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/team-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/images/work-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/aos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/google-map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery-migrate-3.0.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.animateNumber.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.easing.1.3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.stellar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.timepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/scrollax.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section_edit-gambar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/header-section_edit-gambar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/image-slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/image_slider.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer-script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +230,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -119,16 +239,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/vendor" />
+      <recent name="$PROJECT_DIR$/public/vendor/glide" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/dashboard/system-utility" />
       <recent name="$PROJECT_DIR$/resources/views/dashboard/master-data" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/vendor" />
-      <recent name="$PROJECT_DIR$/public/vendor/glide" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -199,6 +320,10 @@
       <workItem from="1567578462463" duration="5109000" />
       <workItem from="1567646662913" duration="1501000" />
       <workItem from="1567648372034" duration="373000" />
+      <workItem from="1567650181229" duration="9606000" />
+      <workItem from="1567733630170" duration="13344000" />
+      <workItem from="1567785345723" duration="1307000" />
+      <workItem from="1567993881904" duration="1530000" />
     </task>
     <servers />
   </component>
