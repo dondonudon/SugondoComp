@@ -1,6 +1,6 @@
 <footer class="footer-area section_gap">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
             <div class="col-lg-6  col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>About Us</h6>
@@ -9,7 +9,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>Contact Us</h6>
                     <p>

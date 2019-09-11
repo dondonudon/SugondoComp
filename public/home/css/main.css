@@ -3925,10 +3925,11 @@ label {
     .s_product_text .list li:last-child {
       margin-bottom: 0px; }
   .s_product_text p {
-    padding-top: 20px;
-    border-top: 1px dotted #d5d5d5;
-    margin-top: 20px;
-    margin-bottom: 70px; }
+    /*padding-top: 20px;*/
+    /*border-top: 1px dotted #d5d5d5;*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 70px; */
+  }
   .s_product_text .card_area .primary-btn {
     line-height: 38px;
     padding: 0px 38px;

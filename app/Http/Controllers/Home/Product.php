@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\webGeneralInfo;
-use App\webImages;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class LandingPage extends Controller
+class Product extends Controller
 {
-    public static function infoLandingPage() {
+    public function index($url) {
         $result = [];
 
         try {
+            $product = DB::table('web_products')->where('url','=',$url)->first();
+
             $generalInfo = DB::table('web_general_info')
                 ->select('section', 'area', 'type', 'data')
                 ->get();
@@ -23,11 +23,10 @@ class LandingPage extends Controller
                     'data' => $c->data,
                 ];
             }
-
-            $result['products'] = DB::table('web_products')->get()->toArray();
         } catch (\Exception $ex) {
             dd('Exception Block',$ex);
         }
-        return $result;
+
+        return view('home.produk.single')->with('prod',$product)->with('info',$result);
     }
 }

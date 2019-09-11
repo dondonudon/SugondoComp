@@ -17,10 +17,7 @@ Route::get('/', function () {
         ->with('info',\App\Http\Controllers\Home\LandingPage::infoLandingPage());
 });
 
-Route::get('aktivitas-kita/{id}', 'Home\AktivitasKita@index');
-Route::get('aktivitas-kita', 'Home\AktivitasKita@list');
-Route::get('rumah-dijual/detail/{id}', 'Home\RumahDetail@index');
-Route::get('rumah-dijual', 'Home\ListRumah@index');
+Route::get('produk/{url}', 'Home\Product@index');
 
 Route::get('admin', 'Dashboard\overview@index');
 
@@ -85,11 +82,11 @@ Route::post('admin/web-component/image-slider/delete', 'Dashboard\WebImageSlider
 Route::get('admin/web-component/visi-misi', 'Dashboard\WebVisiMisi@index');
 Route::get('admin/web-component/visi-misi/visi/image', 'Dashboard\WebVisiMisi@indexVisiImage');
 Route::get('admin/web-component/visi-misi/visi/text', 'Dashboard\WebVisiMisi@indexVisiText');
-Route::get('admin/web-component/visi-misi/misi/text', 'Dashboard\WebVisiMisi@indexMisiText');
-Route::post('admin/web-component/visi-misi/visi/image/submit', 'Dashboard\WebVisiMisi@uploadIndex');
-Route::post('admin/web-component/visi-misi/visi/text/submit', 'Dashboard\WebVisiMisi@uploadIndex');
-Route::post('admin/web-component/visi-misi/misi/text/submit', 'Dashboard\WebVisiMisi@uploadIndex');
-Route::post('admin/web-component/visi-misi/misi/text/delete', 'Dashboard\WebVisiMisi@uploadIndex');
+Route::get('admin/web-component/visi-misi/misi/tambah-baru', 'Dashboard\WebVisiMisi@indexMisiText');
+Route::post('admin/web-component/visi-misi/visi/image/submit', 'Dashboard\WebVisiMisi@visiImageUpload');
+Route::post('admin/web-component/visi-misi/visi/text/submit', 'Dashboard\WebVisiMisi@visiTextEdit');
+Route::post('admin/web-component/visi-misi/misi/text/submit', 'Dashboard\WebVisiMisi@misiTextEdit');
+Route::post('admin/web-component/visi-misi/misi/text/delete', 'Dashboard\WebVisiMisi@misiTextDelete');
 
 Route::get('admin/web-component/our-team', 'Dashboard\WebOurTeam@index');
 Route::post('admin/web-component/our-team/list', 'Dashboard\WebOurTeam@list');
@@ -125,12 +122,11 @@ Route::get('admin/web-component/contact-us', 'Dashboard\WebContactUs@index');
 Route::post('admin/web-component/contact-us/list', 'Dashboard\WebContactUs@list');
 Route::post('admin/web-component/contact-us/submit', 'Dashboard\WebContactUs@submit');
 
-Route::get('admin/web-component/input-rumah-dijual', 'Dashboard\WebInputRumah@index');
-Route::post('admin/web-component/input-rumah-dijual/list', 'Dashboard\WebInputRumah@list');
-Route::post('admin/web-component/input-rumah-dijual/lister', 'Dashboard\WebInputRumah@lister');
-Route::post('admin/web-component/input-rumah-dijual/add', 'Dashboard\WebInputRumah@add');
-Route::get('admin/web-component/input-rumah-dijual/edit-data/{id}', 'Dashboard\WebInputRumah_editdata@index');
-Route::get('admin/web-component/input-rumah-dijual/edit-gambar/{id}', 'Dashboard\WebInputRumah_editgambar@index');
-Route::post('admin/web-component/input-rumah-dijual/submit-edit-data', 'Dashboard\WebInputRumah_editdata@submit');
-Route::post('admin/web-component/input-rumah-dijual/submit-edit-gambar', 'Dashboard\WebInputRumah_editgambar@submit');
-Route::post('admin/web-component/input-rumah-dijual/terjual', 'Dashboard\WebInputRumah@terjual');
+Route::get('admin/web-component/product', 'Dashboard\WebProducts@index');
+Route::get('admin/web-component/product/add', 'Dashboard\WebProducts@add');
+Route::get('admin/web-component/product/edit-content/{id}', 'Dashboard\WebProducts@editContent');
+Route::get('admin/web-component/product/ganti-gambar/{id}', 'Dashboard\WebProducts@gantiGambar');
+Route::post('admin/web-component/product/add/submit', 'Dashboard\WebProducts@addSubmit');
+Route::post('admin/web-component/product/edit/submit', 'Dashboard\WebProducts@editSubmit');
+Route::post('admin/web-component/product/ganti-gambar/submit', 'Dashboard\WebProducts@gantiGambarSubmit');
+Route::post('admin/web-component/product/delete', 'Dashboard\WebProducts@delete');

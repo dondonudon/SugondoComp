@@ -61,15 +61,15 @@ $(document).ready(function(){
     /*=================================
     Javascript for product area carousel
     ==================================*/
-    $(".active-product-area").owlCarousel({
-        items:1,
-        autoplay:false,
-        autoplayTimeout: 5000,
-        loop:true,
-        nav:true,
-        navText:["<img src='home/img/product/prev.png'>","<img src='home/img/product/next.png'>"],
-        dots:false
-    });
+    // $(".active-product-area").owlCarousel({
+    //     items:1,
+    //     autoplay:false,
+    //     autoplayTimeout: 5000,
+    //     loop:true,
+    //     nav:true,
+    //     navText:["<img src='home/img/product/prev.png'>","<img src='home/img/product/next.png'>"],
+    //     dots:false
+    // });
 
     /*=================================
     Javascript for single product area carousel
