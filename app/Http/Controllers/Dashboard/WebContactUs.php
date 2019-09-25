@@ -36,13 +36,7 @@ class WebContactUs extends Controller
                 ->get();
             $result = [];
             foreach ($about as $a) {
-                if ($a->area == 'alamat') {
-                    $result['alamat'] = $a->data;
-                } elseif ($a->area == 'no_telp') {
-                    $result['no_telp'] = $a->data;
-                } else {
-                    $result['email'] = $a->data;
-                }
+                $result[$a->area] = $a->data;
             }
             return json_encode($result);
 //            return $about->toJson();
@@ -53,19 +47,17 @@ class WebContactUs extends Controller
 
     public function submit(Request $request) {
         $data = [
+            'info_perusahaan' => $request->info_perusahaan,
             'alamat' => $request->alamat,
             'no_telp' => $request->no_telp,
             'email' => $request->email,
         ];
         try {
-            DB::table('web_general_info')->where('section','=','contact-us')->delete();
             foreach ($data as $i => $v) {
-                webGeneralInfo::create([
-                    'section' => 'contact-us',
-                    'area' => $i,
-                    'type' => '',
-                    'data' => $v,
-                ]);
+                webGeneralInfo::updateOrCreate(
+                    ['section' => 'contact-us', 'area' => $i, 'type' => ''],
+                    [ 'data' => $v]
+                );
             }
             return 'success';
         } catch (\Exception $ex) {

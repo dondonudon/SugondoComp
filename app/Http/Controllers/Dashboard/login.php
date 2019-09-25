@@ -41,4 +41,13 @@ class login extends Controller
         }
         return $result;
     }
+
+    public function sessionDestroy() {
+        try {
+            \request()->session()->flush();
+        } catch (\Exception $ex) {
+            dd('Exception Block',$ex);
+        }
+        return 'success';
+    }
 }

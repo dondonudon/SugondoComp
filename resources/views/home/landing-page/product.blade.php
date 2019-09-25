@@ -1,4 +1,4 @@
-<section class="owl-carousel active-product-area section_gap">
+<section class="owl-carousel active-product-area section_gap" id="product">
     <!-- single product slide -->
     <div class="single-product-slider">
         <div class="container">
@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="prd-bottom">
                                     <a href="{{ url('produk/'.$i->url) }}" class="social-info">
-                                        <span class="lnr lnr-move"></span>
+                                        <span class="fas fa-eye"></span>
                                         <p class="hover-text">view more</p>
                                     </a>
                                 </div>

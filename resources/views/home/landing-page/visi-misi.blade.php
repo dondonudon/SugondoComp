@@ -1,4 +1,4 @@
-<section class="exclusive-deal-area">
+<section class="exclusive-deal-area" id="visiMisi">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-6 no-padding exclusive-left" style="background: url('{{ url('storage/'.$info['visi-misi']['visi'][0]['data']) }}') center no-repeat">

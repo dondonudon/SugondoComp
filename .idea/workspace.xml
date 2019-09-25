@@ -2,19 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebVisiMisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebVisiMisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/LandingPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/input-rumah-dijual.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/visi_misi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/visi_misi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebContactUs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebContactUs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home/js/gmaps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/gmaps.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/overview.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/image_slider-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/image_slider-add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/visi-misi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/visi-misi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -222,7 +226,10 @@
       <workItem from="1568084731212" duration="12152000" />
       <workItem from="1568126128754" duration="11813000" />
       <workItem from="1568160615242" duration="9000" />
-      <workItem from="1568165212513" duration="1372000" />
+      <workItem from="1568165212513" duration="7840000" />
+      <workItem from="1568301842574" duration="80000" />
+      <workItem from="1568611394139" duration="8644000" />
+      <workItem from="1569210211430" duration="765000" />
     </task>
     <servers />
   </component>

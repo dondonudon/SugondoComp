@@ -1,5 +1,6 @@
 <!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="{{ asset('img/logo-small.ico') }}" />
 <!-- Favicon-->
 <link rel="shortcut icon" href="{{ asset('home/img/fav.png') }}">
 <!-- Author Meta -->

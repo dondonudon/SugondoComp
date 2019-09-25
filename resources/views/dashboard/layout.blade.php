@@ -102,7 +102,7 @@ $segments = request()->segments();
     btnLogout.click(function (e) {
         e.preventDefault();
         $.ajax({
-            url: "{{ url('overview/session-flush') }}",
+            url: "{{ url('admin/session-destroy') }}",
             method: "get",
             success: function(result) {
                 // console.log(result);

@@ -6,19 +6,9 @@
     <div class="content">
         <div class="container-fluid">
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-header bg-dark">
-                            <h5 class="card-title">Filter Chart</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="dateRange">Tanggal Input</label>
-                                <input type="text" class="form-control form-control-sm" id="dateRange">
-                            </div>
-                        </div>
-                    </div>
+                    <img src="{{ asset('img/logo.png') }}" class="img-fluid" alt="logo" style="opacity: 0.8">
                 </div>
             </div>
             <!-- /.row -->

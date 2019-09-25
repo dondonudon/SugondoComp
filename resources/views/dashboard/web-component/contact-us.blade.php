@@ -133,6 +133,7 @@
         function setDisplayData(response) {
             // console.log(response);
             let data = JSON.parse(response);
+            dInfoPerusahaan.innerHTML = data['info_perusahaan'];
             dAlamat.innerHTML = data['alamat'];
             dNoTelp.innerHTML = data['no_telp'];
             dEmail.innerHTML = data['email'];
@@ -141,6 +142,7 @@
         function setEditData(response) {
             // console.log(response);
             let data = JSON.parse(response);
+            iInfoPerusahaan.value = data['info_perusahaan'];
             iAlamat.value = data['alamat'];
             iNoTelp.value = data['no_telp'];
             iEmail.value = data['email'];
@@ -189,7 +191,7 @@
 
             formData.addEventListener('submit', function (e) {
                 e.preventDefault();
-                let data = 'alamat=' + iAlamat.value + '&no_telp=' + iNoTelp.value + '&email=' + iEmail.value;
+                let data = 'info_perusahaan=' + iInfoPerusahaan.value + '&alamat=' + iAlamat.value + '&no_telp=' + iNoTelp.value + '&email=' + iEmail.value;
 
                 kvAjax(
                     '{{ url('admin/web-component/contact-us/submit') }}',

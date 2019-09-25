@@ -12,6 +12,7 @@
 @include('home.landing-page.about-us')
 @include('home.landing-page.visi-misi')
 @include('home.landing-page.product')
+@include('home.landing-page.map')
 {{--@include('home.landing-page.top-marketer')--}}
 {{--@include('home.landing-page.favourite-marketer')--}}
 {{--@include('home.landing-page.our-team')--}}

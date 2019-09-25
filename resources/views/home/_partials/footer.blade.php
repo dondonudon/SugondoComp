@@ -1,25 +1,25 @@
-<footer class="footer-area section_gap">
+<footer class="footer-area section_gap" id="contactUs">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-6  col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>About Us</h6>
-                    <p>
-                        Menjadi perusahaan terkemuka dan terpercaya dalam penyediaan barang melalui kepuasan pelanggan.
+                    <p class="text-white">
+                        {{ $info['contact-us']['info_perusahaan'][0]['data'] }}
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6>Contact Us</h6>
-                    <p>
-                        <i class="fas fa-map-marker"></i> Alamat: Jl. Karangsari III/106 Semarang
+                    <p class="text-white">
+                        <i class="fas fa-map-marker"></i> Alamat: {{ $info['contact-us']['alamat'][0]['data'] }}
                     </p>
-                    <p>
-                        <i class="fas fa-phone"></i> Telp./Fax.: 024-8312701
+                    <p class="text-white">
+                        <i class="fas fa-phone"></i> Telp./Fax.: {{ $info['contact-us']['no_telp'][0]['data'] }}
                     </p>
-                    <p>
-                        <i class="fas fa-envelope"></i> email: cv.sugondo@ymail.com
+                    <p class="text-white">
+                        <i class="fas fa-envelope"></i> email: {{ $info['contact-us']['email'][0]['data'] }}
                     </p>
                 </div>
             </div>

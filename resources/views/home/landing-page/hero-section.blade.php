@@ -1,4 +1,4 @@
-<section class="banner-area" style="background: url({{ asset('storage/'.$info['header']['background'][0]['data']) }}) center no-repeat">
+<section class="banner-area" style="background: url({{ asset('storage/'.$info['header']['background'][0]['data']) }}) center no-repeat" id="promo">
     <div class="container">
         <div class="row fullscreen align-items-center justify-content-start">
             <div class="col-lg-12">

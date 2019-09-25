@@ -19,7 +19,7 @@
 <div class="login-box">
     <div class="login-logo">
 {{--        <i class="fas fa-city"></i>--}}
-        <img src="{{ asset('home/images/rw-logo-2017.jpg') }}" class="img-fluid" ref="company logo" >
+        <img src="{{ asset('img/logo.png') }}" class="img-fluid" ref="company logo"  alt="logo">
     </div>
     <!-- /.login-logo -->
     <div class="card">

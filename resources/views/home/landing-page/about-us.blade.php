@@ -1,4 +1,4 @@
-<section class="exclusive-deal-area">
+<section class="exclusive-deal-area" id="aboutUs">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-6 no-padding exclusive-right">
