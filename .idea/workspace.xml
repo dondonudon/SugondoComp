@@ -3,23 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f162e72-3300-477c-a058-e56dd49ac36e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebContactUs.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebContactUs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/home/js/gmaps.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/home/js/gmaps.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/overview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/overview.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/contact-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/image_slider-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/image_slider-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_partials/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/about-us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/hero-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/landing-page/visi-misi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/landing-page/visi-misi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard/WebProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/web-component/products-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/web-component/products-edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +215,15 @@
       <workItem from="1568301842574" duration="80000" />
       <workItem from="1568611394139" duration="8644000" />
       <workItem from="1569210211430" duration="765000" />
+      <workItem from="1569379833205" duration="1351000" />
+      <workItem from="1569393432286" duration="41000" />
+      <workItem from="1569402822926" duration="1735000" />
+      <workItem from="1569404766514" duration="955000" />
+      <workItem from="1569424764067" duration="1102000" />
+      <workItem from="1569461419956" duration="9000" />
+      <workItem from="1569465047283" duration="53000" />
+      <workItem from="1569559628753" duration="618000" />
+      <workItem from="1569563055515" duration="1293000" />
     </task>
     <servers />
   </component>

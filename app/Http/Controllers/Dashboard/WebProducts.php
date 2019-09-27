@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Ramsey\Uuid\Uuid;
 
 class WebProducts extends Controller
 {
@@ -78,7 +79,7 @@ class WebProducts extends Controller
         $content = $request->productContent;
 
         try {
-            $filename = $url.'.'.$extension;
+            $filename = Uuid::uuid1()->toString().'.'.$extension;
             Storage::putFileAs('public',$gambar,$filename);
 
             $product = new m_WebProduct();
@@ -101,17 +102,21 @@ class WebProducts extends Controller
         $content = $request->productContent;
 
         try {
-            DB::table('web_products')
-                ->where('id','=',$id)
-                ->update([
-                    'judul' => $judul,
-                    'url' => $url,
-                    'content' => $content,
-                ]);
+//            DB::table('web_products')
+//                ->where('id','=',$id)
+//                ->update([
+//                    'judul' => $judul,
+//                    'url' => $url,
+//                    'content' => $content,
+//                ]);
+            $product = m_WebProduct::find($id);
+            $product->judul = $judul;
+            $product->url = $url;
+            $product->content = $content;
+            $product->save();
         } catch (\Exception $ex) {
             dd('Exception Block',$ex);
         }
-
         return 'success';
     }
 

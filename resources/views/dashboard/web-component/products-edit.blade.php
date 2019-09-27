@@ -74,20 +74,35 @@
         const urlDelete = '{{ url('admin/web-component/product/delete') }}';
 
         function kvAjax(url,data,functionTarget) {
-            let xhttp;
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState === 4 && this.status === 200) {
-                    functionTarget(this.responseText);
+            {{--const xhttp = new XMLHttpRequest();--}}
+            {{--xhttp.onreadystatechange = function() {--}}
+            {{--    if (this.readyState === 4 && this.status === 200) {--}}
+            {{--        functionTarget(this.responseText);--}}
+            {{--    }--}}
+            {{--};--}}
+            {{--xhttp.open("POST", url, true);--}}
+            {{--xhttp.setRequestHeader("X-CSRF-TOKEN", "{{ csrf_token() }}");--}}
+            {{--// xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");--}}
+            {{--xhttp.send(data);--}}
+            {{--for (let pair of data.entries()) {--}}
+            {{--    console.log(pair[0]+ ', ' + pair[1]);--}}
+            {{--}--}}
+
+            $.ajax({
+                url: url,
+                method: 'post',
+                processData: false,
+                contentType: false,
+                data: data,
+                success: function(response){
+                    functionTarget(response);
                 }
-            };
-            xhttp.open("POST", url, true);
-            xhttp.setRequestHeader("X-CSRF-TOKEN", "{{ csrf_token() }}");
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send(data);
+            })
         }
 
         function serverResponse(response) {
+            console.error(response);
+
             if (response === 'success') {
                 Swal.fire({
                     type: 'success',
@@ -126,12 +141,18 @@
             });
             btnSimpan.addEventListener('click',function (e) {
                 e.preventDefault();
-                console.log(judul.value);
-                let data = 'id='+formID
-                    +'&judul='+judul.value
-                    +'&productContent='+editor.getData()
-                    +'&url='+contentUrl.innerHTML;
-                kvAjax(urlSubmit,data,serverResponse);
+                // console.log(editor.getData());
+                let formData = new FormData();
+                formData.append('id',formID);
+                formData.append('judul',judul.value);
+                formData.append('url',contentUrl.innerHTML);
+                formData.append('productContent',editor.getData());
+                // let data = '';
+                // data += 'id='+formID;
+                // data += '&judul='+judul.value;
+                // data += '&url='+contentUrl.innerHTML;
+                // data += '&productContent='+encodeURI(editor.getData());
+                kvAjax(urlSubmit,formData,serverResponse);
             });
 
             btnDelete.addEventListener('click',function (e) {
